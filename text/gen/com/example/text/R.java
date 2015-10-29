@@ -25,7 +25,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000c;
+        public static final int action_settings=0x7f080022;
         public static final int button0=0x7f080000;
         public static final int button1=0x7f080007;
         public static final int button10=0x7f08000b;
@@ -38,14 +38,46 @@ public final class R {
         public static final int button8=0x7f080005;
         public static final int button9=0x7f08000a;
         public static final int textView1=0x7f080001;
+        public static final int ybutton1=0x7f080013;
+        public static final int ybutton10=0x7f08001c;
+        public static final int ybutton11=0x7f08001d;
+        public static final int ybutton12=0x7f080019;
+        public static final int ybutton13=0x7f08001b;
+        public static final int ybutton14=0x7f08001a;
+        public static final int ybutton15=0x7f08000c;
+        public static final int ybutton16=0x7f08000d;
+        public static final int ybutton17=0x7f08001e;
+        public static final int ybutton18=0x7f08001f;
+        public static final int ybutton19=0x7f08000e;
+        public static final int ybutton2=0x7f080012;
+        public static final int ybutton20=0x7f08000f;
+        public static final int ybutton21=0x7f080017;
+        public static final int ybutton22=0x7f080018;
+        public static final int ybutton3=0x7f080014;
+        public static final int ybutton4=0x7f080015;
+        public static final int ybutton5=0x7f080016;
+        public static final int ybutton6=0x7f080020;
+        public static final int ybutton7=0x7f080021;
+        public static final int ybutton8=0x7f080011;
+        public static final int ybutton9=0x7f080010;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int taddclass_view=0x7f030001;
-        public static final int tidentity_view=0x7f030002;
-        public static final int tmain_view=0x7f030003;
-        public static final int tmyclass=0x7f030004;
-        public static final int treset_view=0x7f030005;
+        public static final int activity_ymanager=0x7f030001;
+        public static final int taddclass_view=0x7f030002;
+        public static final int tidentity_view=0x7f030003;
+        public static final int tmain_view=0x7f030004;
+        public static final int tmyclass=0x7f030005;
+        public static final int treset_view=0x7f030006;
+        public static final int yadduser_view=0x7f030007;
+        public static final int ydeluser_view=0x7f030008;
+        public static final int yidentity_view=0x7f030009;
+        public static final int ymain_view=0x7f03000a;
+        public static final int ymanagerclass_view=0x7f03000b;
+        public static final int ymanageruser_view=0x7f03000c;
+        public static final int yreset_view=0x7f03000d;
+        public static final int yresetuser_view=0x7f03000e;
+        public static final int yupdateplan_view=0x7f03000f;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -54,6 +86,16 @@ public final class R {
         public static final int tmain=0x7f070003;
         public static final int tmyclass=0x7f070004;
         public static final int treset=0x7f070005;
+        public static final int yadduser=0x7f070006;
+        public static final int ydeluser=0x7f070007;
+        public static final int yidentity=0x7f070008;
+        public static final int ymain=0x7f070009;
+        public static final int ymanager=0x7f07000a;
+        public static final int ymanagerclass=0x7f07000b;
+        public static final int ymanageruser=0x7f07000c;
+        public static final int yreset=0x7f07000d;
+        public static final int yresetuser=0x7f07000e;
+        public static final int yupdateplan=0x7f07000f;
     }
     public static final class string {
         public static final int action_settings=0x7f050002;
@@ -64,6 +106,16 @@ public final class R {
         public static final int title_activity_tmain=0x7f050005;
         public static final int title_activity_tmyclass=0x7f050003;
         public static final int title_activity_treset=0x7f050007;
+        public static final int title_activity_yadduser=0x7f05000d;
+        public static final int title_activity_ydeluser=0x7f05000f;
+        public static final int title_activity_yidentity=0x7f05000a;
+        public static final int title_activity_ymain=0x7f050008;
+        public static final int title_activity_ymanager=0x7f050010;
+        public static final int title_activity_ymanagerclass=0x7f050011;
+        public static final int title_activity_ymanageruser=0x7f05000c;
+        public static final int title_activity_yreset=0x7f05000b;
+        public static final int title_activity_yresetuser=0x7f05000e;
+        public static final int title_activity_yupdateplan=0x7f050009;
     }
     public static final class style {
         /** 

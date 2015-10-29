@@ -9,5 +9,15 @@
     <string name="title_activity_tmain">Tmain</string>
     <string name="title_activity_tidentity">Tidentity</string>
     <string name="title_activity_treset">Treset</string>
+    <string name="title_activity_ymain">Ymain</string>
+    <string name="title_activity_yupdateplan">Yupdateplan</string>
+    <string name="title_activity_yidentity">Yidentity</string>
+    <string name="title_activity_yreset">Yreset</string>
+    <string name="title_activity_ymanageruser">Ymanageruser</string>
+    <string name="title_activity_yadduser">Yadduser</string>
+    <string name="title_activity_yresetuser">Yresetuser</string>
+    <string name="title_activity_ydeluser">Ydeluser</string>
+    <string name="title_activity_ymanager">Ymanager</string>
+    <string name="title_activity_ymanagerclass">Ymanagerclass</string>
 
 </resources>

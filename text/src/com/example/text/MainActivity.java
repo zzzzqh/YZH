@@ -36,7 +36,8 @@ public class MainActivity extends Activity {
 				 * 需要一个身份判断跳转到Tmain/Mmain/Ymain
 				 * 当前默认跳转到Tmain
 				 */
-				 Intent intent=new Intent(MainActivity.this,Tmain.class);
+				 //Intent intent=new Intent(MainActivity.this,Tmain.class);
+				 Intent intent=new Intent(MainActivity.this,Ymain.class);
 	             MainActivity.this.startActivity(intent);
 				
 			}

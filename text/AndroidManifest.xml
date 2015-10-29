@@ -42,6 +42,46 @@
             android:name=".Treset"
             android:label="@string/title_activity_treset" >
         </activity>
+        <activity
+            android:name=".Ymain"
+            android:label="@string/title_activity_ymain" >
+        </activity>
+        <activity
+            android:name=".Yupdateplan"
+            android:label="@string/title_activity_yupdateplan" >
+        </activity>
+        <activity
+            android:name=".Yidentity"
+            android:label="@string/title_activity_yidentity" >
+        </activity>
+        <activity
+            android:name=".Yreset"
+            android:label="@string/title_activity_yreset" >
+        </activity>
+        <activity
+            android:name=".Ymanageruser"
+            android:label="@string/title_activity_ymanageruser" >
+        </activity>
+        <activity
+            android:name=".Yadduser"
+            android:label="@string/title_activity_yadduser" >
+        </activity>
+        <activity
+            android:name=".Yresetuser"
+            android:label="@string/title_activity_yresetuser" >
+        </activity>
+        <activity
+            android:name=".Ydeluser"
+            android:label="@string/title_activity_ydeluser" >
+        </activity>
+        <activity
+            android:name=".Ymanager"
+            android:label="@string/title_activity_ymanager" >
+        </activity>
+        <activity
+            android:name=".Ymanagerclass"
+            android:label="@string/title_activity_ymanagerclass" >
+        </activity>
     </application>
 
 </manifest>
