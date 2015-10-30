@@ -20,15 +20,24 @@ public class Ymanagerclass extends Activity {
 		setContentView(R.layout.ymanagerclass_view);
 		ybt21=(Button) findViewById(R.id.ybutton21);
 		ybt22=(Button) findViewById(R.id.ybutton22);
-		/*ybt21.setOnClickListener(new OnClickListener() {
+		ybt21.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent=new Intent(Ymanagerclass.this,Yupdateplan.class);
-				Ymain.this.startActivity(intent);
+				Intent intent=new Intent(Ymanagerclass.this,Yunteacher.class);
+				Ymanagerclass.this.startActivity(intent);
 			}
-		});*/
+		});
+		ybt22.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(Ymanagerclass.this,Ycheck.class);
+				Ymanagerclass.this.startActivity(intent);
+			}
+		});
 	}
 
 	

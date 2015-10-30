@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.text.Mmain" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这是系负责人主界面" />
+
+    <Button
+        android:id="@+id/mmbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mmbutton2"
+        android:layout_alignBottom="@+id/mmbutton2"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginLeft="26dp"
+        android:text="个人信息" />
+
+    <Button
+        android:id="@+id/mmbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="44dp"
+        android:layout_marginRight="37dp"
+        android:text="选课管理" />
+
+</RelativeLayout>

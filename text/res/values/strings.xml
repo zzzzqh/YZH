@@ -19,5 +19,12 @@
     <string name="title_activity_ydeluser">Ydeluser</string>
     <string name="title_activity_ymanager">Ymanager</string>
     <string name="title_activity_ymanagerclass">Ymanagerclass</string>
+    <string name="title_activity_yunteacher">Yunteacher</string>
+    <string name="title_activity_ycheck">Ycheck</string>
+    <string name="title_activity_youtput">Youtput</string>
+    <string name="title_activity_mmain">Mmain</string>
+    <string name="title_activity_mmanager">Mmanager</string>
+    <string name="title_activity_midentity">Midentity</string>
+    <string name="title_activity_mreset">Mreset</string>
 
 </resources>
