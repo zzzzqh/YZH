@@ -34,7 +34,7 @@ public class Ymanagerclass extends Activity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent=new Intent(Ymanagerclass.this,Ycheck.class);
+				Intent intent=new Intent(Ymanagerclass.this,Ymain.class);
 				Ymanagerclass.this.startActivity(intent);
 			}
 		});

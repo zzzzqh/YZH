@@ -25,8 +25,8 @@ public class Taddclass extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.taddclass_view);
-		bt4=(Button) findViewById(R.id.button4);
-		bt5=(Button) findViewById(R.id.button5);
+		bt4=(Button) findViewById(R.id.addclass_button4);
+		bt5=(Button) findViewById(R.id.addclass_button5);
 		bt4.setOnClickListener(new OnClickListener() {
 			
 			@Override

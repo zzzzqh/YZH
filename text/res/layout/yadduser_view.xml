@@ -2,36 +2,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/background"
     tools:context="com.example.text.Yadduser" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/yaddruser_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="添加用户"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/yadduser_edit_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="添加用户" />
+        android:layout_above="@+id/ybutton16"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/yaddruser_title"
+        android:background="@drawable/login_layout_editor_bg"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/yadduser_textView1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="13dp"
+            android:layout_weight="241.96"
+            android:gravity="center"
+            android:text="填写教师信息"
+            android:textColor="@color/purple"
+            android:textSize="15sp" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/ybutton15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="34dp"
-        android:layout_marginLeft="26dp"
-        android:text="确认添加" />
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/ybutton16"
+        android:layout_weight="241.96"
+        android:background="@color/purple"
+        android:text="确认添加"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/ybutton16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/ybutton15"
-        android:layout_alignBottom="@+id/ybutton15"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="58dp"
-        android:text="返回" />
+        android:background="@color/purple"
+        android:text="返回"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
 
 </RelativeLayout>

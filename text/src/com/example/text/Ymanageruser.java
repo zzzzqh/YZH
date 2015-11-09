@@ -24,6 +24,7 @@ public class Ymanageruser extends Activity {
 	private Button ybt12;
 	private Button ybt13;
 	private Button ybt14;
+	private Button ybt15;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class Ymanageruser extends Activity {
 		ybt12=(Button) findViewById(R.id.ybutton12);
 		ybt13=(Button) findViewById(R.id.ybutton13);
 		ybt14=(Button) findViewById(R.id.ybutton14);
+		ybt15=(Button) findViewById(R.id.ymanageruser_back);
 		ybt12.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -56,6 +58,16 @@ public class Ymanageruser extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent=new Intent(Ymanageruser.this,Ydeluser.class);
 				Ymanageruser.this.startActivity(intent);
+			}
+		});
+		ybt15.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(Ymanageruser.this,Ymain.class);
+				Ymanageruser.this.startActivity(intent);
+				
 			}
 		});
 	}

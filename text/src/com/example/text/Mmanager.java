@@ -35,6 +35,7 @@ public class Mmanager extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Toast.makeText(Mmanager.this, "提交申请成功", 1).show();
+				Intent intent =new Intent(Mmanager.this,Mmain.class);
 			}
 		});
 		}
