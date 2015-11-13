@@ -26,19 +26,19 @@
     <string name="title_activity_mmanager">Mmanager</string>
     <string name="title_activity_midentity">Midentity</string>
     <string name="title_activity_mreset">Mreset</string>
-    
-     <string name="total_name">姓名</string>
-      <string name="user_name">用户名</string>
-       <string name="password">密码</string>
-       <string name="phone">手机号码</string>
-        <string name="email">邮箱</string>
-        <string name="resource_y">所属学院</string>
-         <string name="age">年龄</string>
-          <string name="sex">性别</string>
-            <string name="boy">男</string>
-            <string name="girl">女</string>
-            <string name="course_state">选课状态</string>
-             <string name="unchoose">未选</string>
-            
+    <string name="total_name">姓名</string>
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="phone">手机号码</string>
+    <string name="email">邮箱</string>
+    <string name="resource_y">所属学院</string>
+    <string name="age">年龄</string>
+    <string name="sex">性别</string>
+    <string name="boy">男</string>
+    <string name="girl">女</string>
+    <string name="course_state">选课状态</string>
+    <string name="unchoose">未选</string>
+    <string name="title_activity_sqlclass">Sqlclass</string>
+    <string name="title_activity_sqlite">SQLite</string>
 
 </resources>

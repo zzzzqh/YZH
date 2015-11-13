@@ -110,6 +110,14 @@
             android:name=".Mreset"
             android:label="@string/title_activity_mreset" >
         </activity>
+        <activity
+            android:name=".Sqlclass"
+            android:label="@string/title_activity_sqlclass" >
+        </activity>
+        <activity
+            android:name=".SQLite"
+            android:label="@string/title_activity_sqlite" >
+        </activity>
     </application>
 
 </manifest>
