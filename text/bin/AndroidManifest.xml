@@ -30,6 +30,10 @@
             android:name=".Taddclass"
             android:label="@string/title_activity_taddclass" >
         </activity>
+         <activity
+            android:name=".Taddclass_1"
+            android:label="@string/title_activity_taddclass_1" >
+        </activity>
         <activity
             android:name=".Tmain"
             android:label="@string/title_activity_tmain" >
@@ -109,14 +113,6 @@
         <activity
             android:name=".Mreset"
             android:label="@string/title_activity_mreset" >
-        </activity>
-        <activity
-            android:name=".Sqlclass"
-            android:label="@string/title_activity_sqlclass" >
-        </activity>
-        <activity
-            android:name=".SQLite"
-            android:label="@string/title_activity_sqlite" >
         </activity>
     </application>
 

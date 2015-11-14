@@ -44,6 +44,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/addclass_professical_aspect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -51,13 +52,13 @@
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
 
-                <EditText
-                    android:id="@+id/addclass_professical_aspect"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
+                <Spinner
+                    android:id="@+id/addclass_professical_aspect1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
                     android:background="#fffbfbfb"
                     android:singleLine="true" />
+
             </LinearLayout>
 
             <View
@@ -196,7 +197,7 @@
                     android:textSize="17sp" />
 
                 <EditText
-                    android:id="@+id/assclass_book_name"
+                    android:id="@+id/addclass_book_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
@@ -217,31 +218,47 @@
                 android:focusableInTouchMode="true"
                 android:gravity="center_vertical"
                 android:orientation="horizontal" >
-                  
-                  <RelativeLayout 
-                        android:layout_width="match_parent"
-    					android:layout_height="match_parent"
-    				    >
+                
+                  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent" >
 
-                   <CheckBox
-                       android:id="@+id/addclass_xuanyong"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_centerVertical="true"
-                       android:layout_marginRight="20dp"
-                       android:layout_toLeftOf="@+id/addclass_zibian"
-                       android:text="选用" />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_centerVertical="true"
+                          android:layout_toLeftOf="@+id/addclass_jiaocaileixing1"
+                          android:text="教材类型"
+                          android:textColor="@android:color/black"
+                          android:textSize="17sp" />
 
-                   <CheckBox
-                       android:id="@+id/addclass_zibian"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_alignParentRight="true"
-                       android:layout_centerVertical="true"
-                       android:layout_marginRight="41dp"
-                       android:text="自编" />
+                      <RadioGroup
+                          android:id="@+id/addclass_jiaocaileixing1"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:orientation="horizontal" >
 
-               </RelativeLayout>   
+                          <RadioButton
+                              android:id="@+id/addclass_zibian"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentRight="true"
+                              android:layout_centerVertical="true"
+                              android:layout_marginRight="40dp"
+                              android:text="自编" />
+
+                          <RadioButton
+                              android:id="@+id/addclass_xuanyong"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_marginRight="44dp"
+                              android:text="选用" />
+                      </RadioGroup>
+
+                  </RelativeLayout>
+   
             </LinearLayout>
             
                 <View

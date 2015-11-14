@@ -54,7 +54,7 @@
                     android:textSize="17sp" />
 
                 <EditText
-                    android:id="@+id/mientity_name"
+                    android:id="@+id/midentity_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
@@ -84,7 +84,7 @@
                     android:textSize="17sp" />
 
                 <EditText
-                    android:id="@+id/miendtity_user_name"
+                    android:id="@+id/midentity_user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
@@ -112,6 +112,14 @@
                     android:text="@string/password"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
+                
+                <EditText
+                    android:id="@+id/miendtity_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:password="true" />
   
                 </LinearLayout>
             
@@ -166,37 +174,45 @@
                   <RelativeLayout
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" >
+                      
 
-                      <CheckBox
-                          android:id="@+id/total_boy"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_centerHorizontal="true"
-                          android:layout_centerVertical="true"
-                          android:text="@string/boy" />
+                    <RadioGroup
+                        android:id="@+id/m_sex_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" >
 
-                      <CheckBox
-                          android:id="@+id/total_girl"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_alignBaseline="@+id/total_boy"
-                          android:layout_alignBottom="@+id/total_boy"
-                          android:layout_marginLeft="16dp"
-                          android:layout_toRightOf="@+id/total_boy"
-                          android:text="@string/girl" />
+                        <RadioButton
+                            android:id="@+id/midentity_boy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" 
+                            android:text="@string/boy" />
 
-                      <TextView
-                          android:id="@+id/m_sex"
-                          android:layout_width="80dp"
-                          android:layout_height="wrap_content"
-                          android:layout_alignParentLeft="true"
-                          android:layout_centerVertical="true"
-                          android:layout_marginLeft="13dp"
-                          android:text="性别"
-                          android:textColor="@android:color/black"
-                          android:textSize="17sp" />
+                        <RadioButton
+                            android:id="@+id/midentity_girl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/total_boy"
+                            android:layout_alignBottom="@+id/total_boy"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@+id/total_boy"
+                            android:text="@string/girl" />
+                    </RadioGroup>
 
-                  </RelativeLayout>
+                    <TextView
+                        android:id="@+id/m_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="性别"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                   
+</RelativeLayout>
    
             </LinearLayout>
             

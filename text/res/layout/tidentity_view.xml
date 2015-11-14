@@ -25,7 +25,7 @@
             android:textSize="15sp" />
     </LinearLayout>
     
-           <LinearLayout
+          <LinearLayout
             android:id="@+id/tidentity_edit_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,6 +45,7 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tidentity_zhanghao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -52,13 +53,7 @@
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
 
-                <EditText
-                    android:id="@+id/tientity_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:background="#fffbfbfb"
-                    android:singleLine="true" />
+   
             </LinearLayout>
 
             <View
@@ -66,7 +61,7 @@
                 android:layout_height="1dp"
                 android:background="#ffc8c8c8" />
              
-             <LinearLayout
+           <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
                 android:focusable="true"
@@ -75,26 +70,23 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tidentity_mima"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/user_name"
+                    android:text="初始密码"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
-
-                <EditText
-                    android:id="@+id/tiendtity_user_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
-                    android:background="#fffbfbfb"
-                    android:singleLine="true" />
-            </LinearLayout>
-              
-            <View
+             
+  
+                </LinearLayout>
+            
+              <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#ffc8c8c8" />
+            
+              
              
              <LinearLayout
                 android:layout_width="match_parent"
@@ -111,6 +103,15 @@
                     android:text="@string/password"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
+                <EditText
+                    android:id="@+id/tiendtity_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#fffbfbfb"
+                    android:password="true" 
+                    android:hint="可不修改"/>
   
                 </LinearLayout>
             
@@ -119,9 +120,39 @@
                 android:layout_height="1dp"
                 android:background="#ffc8c8c8" />
             
+              
+               
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="专业方向"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+                
+                <Spinner
+                    android:id="@+id/t_professical_aspect1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+
+               
+            </LinearLayout>
              
             
-              
+             <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />  
          
             <LinearLayout
                 android:layout_width="match_parent"
@@ -140,70 +171,67 @@
                     android:textSize="17sp" />
 
                 <EditText
-                    android:id="@+id/total_age"
-                    android:layout_width="match_parent"
+                    android:id="@+id/tidentity_age"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     android:background="#fffbfbfb"
                     android:singleLine="true" />
+                
+                 <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent" >
+                      
+
+                    <RadioGroup
+                        android:id="@+id/t_sex_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/tidentity_boy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/boy" />
+                        <RadioButton
+                        android:id="@+id/tidentity_girl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/t_sex_1"
+                        android:layout_toRightOf="@+id/t_sex_1"
+                        android:text="@string/girl" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/t_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="性别"
+                        android:textColor="@android:color/black"
+                        android:textSize="17sp" />
+                   
+</RelativeLayout>
+
+          
             </LinearLayout>
               
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="#ffc8c8c8" />
+                           
+
             
-               
-               <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-                  
-                  <RelativeLayout
-                      android:layout_width="match_parent"
-                      android:layout_height="match_parent" >
 
-                      <CheckBox
-                          android:id="@+id/total_boy"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_centerHorizontal="true"
-                          android:layout_centerVertical="true"
-                          android:text="@string/boy" />
-
-                      <CheckBox
-                          android:id="@+id/total_girl"
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:layout_alignBaseline="@+id/total_boy"
-                          android:layout_alignBottom="@+id/total_boy"
-                          android:layout_marginLeft="16dp"
-                          android:layout_toRightOf="@+id/total_boy"
-                          android:text="@string/girl" />
-
-                      <TextView
-                          android:id="@+id/y_sex"
-                          android:layout_width="80dp"
-                          android:layout_height="wrap_content"
-                          android:layout_alignParentLeft="true"
-                          android:layout_centerVertical="true"
-                          android:layout_marginLeft="13dp"
-                          android:text="性别"
-                          android:textColor="@android:color/black"
-                          android:textSize="17sp" />
-
-                  </RelativeLayout>
-   
-            </LinearLayout>
             
-                <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#ffc8c8c8" />
-            
+             
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="47dp"
