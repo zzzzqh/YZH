@@ -1,0 +1,301 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Yunteacher" >
+    
+    
+    
+     <LinearLayout
+        android:id="@+id/yunteacher_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="未选课教师"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+    
+       <LinearLayout
+           android:id="@+id/yunteacher_edit_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_above="@+id/ybutton23"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/yunteacher_title"
+           android:background="@drawable/login_layout_editor_bg"
+           android:orientation="horizontal" >
+        
+        <LinearLayout
+              android:layout_width="98dp"
+              android:layout_height="match_parent"
+              android:layout_alignParentLeft="true"
+              android:background="@drawable/login_layout_editor_bg"
+              android:orientation="vertical" >
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/total_name"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+
+                
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+
+                 
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="小明"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+
+                
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                 
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="张三"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+
+                
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                 
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="李雷"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+
+                
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+
+                 
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="王梅梅"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+
+                
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                 
+              
+             </LinearLayout>
+              
+             
+            <LinearLayout
+                 android:layout_width="113dp"
+                 android:layout_height="match_parent"
+                 android:layout_alignParentLeft="true"
+                 android:background="@drawable/login_layout_editor_bg"
+                 android:orientation="vertical" >
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/phone"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                  
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+            
+                 
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="12456987548"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                  
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                 
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="15623456987"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                  
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                 
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="18649752222"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                  
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                 
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="18847521475"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                  
+                 <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+              
+             </LinearLayout>
+             
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/login_layout_editor_bg"
+                    android:orientation="vertical" >
+
+                    <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/course_state"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                     <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                     
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/unchoose"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                     <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                     
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/unchoose"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                     <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                     
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/unchoose"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                     <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                     
+                     <TextView
+                     android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:layout_marginTop="5sp"
+                  android:text="@string/unchoose"
+                  android:textColor="@android:color/black"
+                  android:textSize="17sp" />
+                     <View
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="#ffc8c8c8" />
+                     
+              
+             </LinearLayout>
+       </LinearLayout>
+
+    <Button
+        android:id="@+id/ybutton23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/purple"
+        android:text="返回" />
+
+</RelativeLayout>

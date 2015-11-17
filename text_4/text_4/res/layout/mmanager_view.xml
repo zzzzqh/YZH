@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@color/background"
+    tools:context="com.example.text.Mmanager" >
+
+    
+       <LinearLayout
+            android:id="@+id/mmanager_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mmanager_title"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="vertical" >
+             
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                  <Button
+                android:id="@+id/mmanager_c1"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="计算机图形学"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+                  
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                android:id="@+id/mmanager_c2"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="EDA技术与实践"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+              
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                  <Button
+                android:id="@+id/mmanager_c3"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="现代计算机接口技术"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+                  
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+               <Button
+                android:id="@+id/mmanager_c4"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="软件工程"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+                  
+            </LinearLayout>
+</LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/mmanager_title"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@color/purple"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:singleLine="true"
+              android:text="选课管理"
+              android:textColor="@android:color/white"
+              android:textSize="15sp" />
+      </LinearLayout>
+
+    <Button
+        android:id="@+id/mmabutton2"
+       android:layout_width="160dp"
+          android:layout_height="42dp"
+          android:layout_alignBaseline="@+id/mmabutton1"
+          android:layout_alignBottom="@+id/ybutton21"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="47dp"
+          android:background="@color/purple"
+          android:text="提交审核"
+          android:textSize="15sp"
+          android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/mmabutton1"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/purple"
+        android:text="未选课教师"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

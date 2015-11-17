@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Ymanageruser" >
+
+   <LinearLayout
+        android:id="@+id/ymanageruser_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="用户管理"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/ymanageruser_edit_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/ymanageruser_title"
+         android:background="@drawable/login_layout_editor_bg"
+         android:orientation="vertical" >
+
+         <TextView
+             android:id="@+id/ymanageruser_textView1"
+             android:layout_width="match_parent"
+             android:layout_height="55dp"
+             android:layout_marginLeft="13dp"
+             android:layout_marginRight="13dp"
+             android:layout_marginTop="13dp"
+             android:gravity="center"
+             android:text="添加/删除教师"
+             android:textColor="@color/purple"
+             android:textSize="15sp" />
+
+         <Button
+             android:id="@+id/ybutton12"
+             android:layout_width="match_parent"
+             android:layout_height="42dp"
+             android:layout_marginLeft="13dp"
+             android:layout_marginRight="13dp"
+             android:layout_marginTop="13dp"
+             android:background="@color/purple"
+             android:textColor="@android:color/white"
+             android:textSize="15sp" 
+             android:text="添加用户" />
+
+         <Button
+             android:id="@+id/ybutton14"
+              android:layout_width="match_parent"
+             android:layout_height="42dp"
+             android:layout_marginLeft="13dp"
+             android:layout_marginRight="13dp"
+             android:layout_marginTop="13dp"
+             android:background="@color/purple"
+             android:textColor="@android:color/white"
+             android:textSize="15sp"
+             android:text="删除用户" />
+
+         <Button
+             android:id="@+id/ybutton13"
+              android:layout_width="match_parent"
+             android:layout_height="42dp"
+             android:layout_marginLeft="13dp"
+             android:layout_marginRight="13dp"
+             android:layout_marginTop="13dp"
+             android:background="@color/purple"
+             android:textColor="@android:color/white"
+             android:textSize="15sp"
+             android:text="修改用户信息" />
+         
+            <Button
+             android:id="@+id/ymanageruser_back"
+              android:layout_width="match_parent"
+             android:layout_height="42dp"
+             android:layout_marginLeft="13dp"
+             android:layout_marginRight="13dp"
+             android:layout_marginTop="13dp"
+             android:background="@color/purple"
+             android:textColor="@android:color/white"
+             android:textSize="15sp"
+             android:text="返回" />
+     </LinearLayout>
+
+</RelativeLayout>

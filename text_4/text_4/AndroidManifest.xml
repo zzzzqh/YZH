@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.text"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Tmyclass"
+            android:label="@string/title_activity_tmyclass" >
+        </activity>
+        <activity
+            android:name=".Taddclass"
+            android:label="@string/title_activity_taddclass" >
+        </activity>
+         <activity
+            android:name=".Taddclass_1"
+            android:label="@string/title_activity_taddclass_1" >
+        </activity>
+        <activity
+            android:name=".Tmain"
+            android:label="@string/title_activity_tmain" >
+        </activity>
+        <activity
+            android:name=".Tidentity"
+            android:label="@string/title_activity_tidentity" >
+        </activity>
+        <activity
+            android:name=".Treset"
+            android:label="@string/title_activity_treset" >
+        </activity>
+        <activity
+            android:name=".Ymain"
+            android:label="@string/title_activity_ymain" >
+        </activity>
+        <activity
+            android:name=".Yupdateplan"
+            android:label="@string/title_activity_yupdateplan" >
+        </activity>
+        <activity
+            android:name=".Yidentity"
+            android:label="@string/title_activity_yidentity" >
+        </activity>
+        <activity
+            android:name=".Yreset"
+            android:label="@string/title_activity_yreset" >
+        </activity>
+        <activity
+            android:name=".Ymanageruser"
+            android:label="@string/title_activity_ymanageruser" >
+        </activity>
+        <activity
+            android:name=".Yadduser"
+            android:label="@string/title_activity_yadduser" >
+        </activity>
+         <activity
+            android:name=".Yadduser_1"
+            android:label="@string/title_activity_yadduser_1" >
+        </activity>
+        <activity
+            android:name=".Yresetuser"
+            android:label="@string/title_activity_yresetuser" >
+        </activity>
+         <activity
+            android:name=".Yresetuser_1"
+            android:label="@string/title_activity_yresetuser_1" >
+        </activity>
+        <activity
+            android:name=".Ydeluser"
+            android:label="@string/title_activity_ydeluser" >
+        </activity>
+          <activity
+            android:name=".Ydeluser_1"
+            android:label="@string/title_activity_ydeluser_1" >
+        </activity>
+        <activity
+            android:name=".Ymanager"
+            android:label="@string/title_activity_ymanager" >
+        </activity>
+        <activity
+            android:name=".Ymanagerclass"
+            android:label="@string/title_activity_ymanagerclass" >
+        </activity>
+        <activity
+            android:name=".Yunteacher"
+            android:label="@string/title_activity_yunteacher" >
+        </activity>
+        <activity
+            android:name=".Ycheck"
+            android:label="@string/title_activity_ycheck" >
+        </activity>
+        <activity
+            android:name=".Youtput"
+            android:label="@string/title_activity_youtput" >
+        </activity>
+        <activity
+            android:name=".Mmain"
+            android:label="@string/title_activity_mmain" >
+        </activity>
+        <activity
+            android:name=".Mmanager"
+            android:label="@string/title_activity_mmanager" >
+        </activity>
+        <activity
+            android:name=".Midentity"
+            android:label="@string/title_activity_midentity" >
+        </activity>
+        <activity
+            android:name=".Mreset"
+            android:label="@string/title_activity_mreset" >
+        </activity>
+    </application>
+
+</manifest>

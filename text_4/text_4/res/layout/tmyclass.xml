@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/background"
+    tools:context="com.example.text.Tmyclass" >
+
+    
+    
+     <LinearLayout
+            android:id="@+id/tmyclass_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tmyclass_title"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="vertical" >
+             
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                  <Button
+                android:id="@+id/tmyclass_c1"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="计算机图形学"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+                  
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                android:id="@+id/tmyclass_c2"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="EDA技术与实践"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+              
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                  <Button
+                android:id="@+id/tmyclass_c3"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:background="@drawable/login_layout_editor_bg"
+                android:text="现代计算机接口技术"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+                  
+            </LinearLayout>
+
+           
+</LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/tmyclass_title"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@color/purple"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:singleLine="true"
+              android:text="我的选课"
+              android:textColor="@android:color/white"
+              android:textSize="15sp" />
+      </LinearLayout>
+    
+
+    <Button
+        android:id="@+id/button3"
+       android:layout_width="160dp"
+          android:layout_height="42dp"
+          android:layout_alignBaseline="@+id/button2"
+          android:layout_alignBottom="@+id/button2"
+          android:layout_alignParentRight="true"
+          android:layout_marginTop="47dp"
+          android:background="@color/purple"
+          android:textSize="15sp"
+          android:textColor="@android:color/white"
+        android:text="提交申请" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/purple"
+        android:text="添加课程"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>
