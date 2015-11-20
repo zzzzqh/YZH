@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">text</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tmyclass">Tmyclass</string>
+    <string name="title_activity_taddclass">Taddclass</string>
+    <string name="title_activity_tmain">Tmain</string>
+    <string name="title_activity_tidentity">Tidentity</string>
+    <string name="title_activity_treset">Treset</string>
+    <string name="title_activity_ymain">Ymain</string>
+    <string name="title_activity_yupdateplan">Yupdateplan</string>
+    <string name="title_activity_yidentity">Yidentity</string>
+    <string name="title_activity_yreset">Yreset</string>
+    <string name="title_activity_ymanageruser">Ymanageruser</string>
+    <string name="title_activity_yadduser">Yadduser</string>
+     <string name="title_activity_yadduser_1">Yadduser</string>
+    <string name="title_activity_yresetuser">Yresetuser</string>
+    <string name="title_activity_yresetuser_1">Yresetuser_1</string>
+    <string name="title_activity_ydeluser">Ydeluser</string>
+     <string name="title_activity_ydeluser_1">Ydeluser_1</string>
+    <string name="title_activity_ymanager">Ymanager</string>
+    <string name="title_activity_ymanagerclass">Ymanagerclass</string>
+    <string name="title_activity_yunteacher">Yunteacher</string>
+    <string name="title_activity_ycheck">Ycheck</string>
+    <string name="title_activity_youtput">Youtput</string>
+    <string name="title_activity_mmain">Mmain</string>
+    <string name="title_activity_mmanager">Mmanager</string>
+    <string name="title_activity_midentity">Midentity</string>
+    <string name="title_activity_mreset">Mreset</string>
+    
+     <string name="total_name">姓名</string>
+      <string name="user_name">用户名</string>
+       <string name="password">新密码</string>
+       <string name="phone">手机号码</string>
+        <string name="email">邮箱</string>
+        <string name="resource_y">所属学院</string>
+         <string name="age">年龄</string>
+          <string name="sex">性别</string>
+            <string name="boy">男</string>
+            <string name="girl">女</string>
+            <string name="course_state">选课状态</string>
+             <string name="unchoose">未选</string>
+
+             <string name="total_zhigonghao">职工号</string>
+             <string name="total_password">初始密码</string>
+             <string name="total_phone">手机号码</string>
+             <string name="total_power">用户权限</string>
+              <string name="total_choose">选择</string>
+           <string name="title_activity_taddclass_1">Taddclass_1</string>
+            
+
+</resources>

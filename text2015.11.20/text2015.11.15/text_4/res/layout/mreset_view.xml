@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@color/background"
+    tools:context="com.example.text.Mreset" >
+
+    <LinearLayout
+        android:id="@+id/mreset_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="修改个人信息"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+ <LinearLayout
+         android:id="@+id/yreset_edit_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/mrbutton1"
+         android:layout_alignParentLeft="true"
+         android:layout_below="@+id/mreset_title"
+         android:background="@drawable/login_layout_editor_bg"
+         android:orientation="vertical" >
+
+         <ListView
+            android:id="@+id/m_xinxi"
+            android:layout_width="wrap_content"
+            android:layout_height="347dp" >
+        </ListView>
+     </LinearLayout>
+    <Button
+        android:id="@+id/mrbutton2"
+        android:layout_width="160dp"
+         android:layout_height="42dp"
+         android:layout_alignBaseline="@+id/mrbutton1"
+         android:layout_alignBottom="@+id/mrbutton1"
+         android:layout_toRightOf="@+id/mrbutton1"
+         android:background="@color/purple"
+         android:text="返回"
+         android:textColor="@android:color/white"
+         android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/mrbutton1"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/purple"
+        android:text="确认修改"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>

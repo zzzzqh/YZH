@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:background="@color/background"
+       xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.text.Yresetuser_1"
+ >
+    
+    
+     <LinearLayout
+        android:id="@+id/yresetuser_title_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="修改用户信息"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+    
+      <LinearLayout
+            android:id="@+id/yidentity_edit_layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/yresetuser_title_1"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="vertical" >
+             
+          <ListView
+              android:id="@+id/yresetuser_xinxi"
+              android:layout_width="312dp"
+              android:layout_height="101dp" />
+          <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+          
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/total_name"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+                
+                  <EditText
+                    android:id="@+id/yresetuser_xingming_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:ems="10"
+                    android:singleLine="true" ></EditText>
+                
+                
+                
+                
+
+            </LinearLayout>
+              
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="密码"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+                
+                <EditText
+                    android:id="@+id/yresetuser_mima_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:ems="10"
+                    android:singleLine="true" >
+
+                </EditText>
+  
+                </LinearLayout>
+                
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+                
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="用户权限"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/yresetuser_quanxain_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+                
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                
+            </LinearLayout>
+  </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/yresetuser_1_button2"
+            android:layout_width="80dp"
+            android:layout_height="42dp"
+            android:layout_alignBaseline="@+id/yresetuser_1_button1"
+            android:layout_alignBottom="@+id/yresetuser_1_button1"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/yresetuser_1_button1"
+            android:background="@color/purple"
+            android:text="取消"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/yresetuser_1_button1"
+            android:layout_width="160dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/purple"
+            android:text="确认修改"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    
+    </RelativeLayout>
+
+

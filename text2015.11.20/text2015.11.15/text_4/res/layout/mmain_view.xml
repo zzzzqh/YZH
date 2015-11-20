@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Mmain" >
+
+    <LinearLayout
+        android:id="@+id/mmain_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/m_xuenian"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:text="学年"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/m_xueqi"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/m_chaxun"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_gravity="bottom"
+            android:background="@color/purple"
+            android:text="GO"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/mmain_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mmain_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/login_layout_editor_bg"
+        android:orientation="vertical" >
+      
+        <ListView
+            android:id="@+id/m_kkjhs"
+            android:layout_width="match_parent"
+            android:layout_height="370dp" >
+
+        </ListView>
+            </LinearLayout>
+
+    <Button
+        android:id="@+id/mmbutton1"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple"
+        android:text="个人信息"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/mmbutton2"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/purple"
+        android:text="选课管理"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</RelativeLayout>
