@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+        android:id="@+id/ymain_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+         <Spinner
+            android:id="@+id/y_xuenian"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:singleLine="true"
+            android:text="学年"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <Spinner
+            android:id="@+id/y_xueqi"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+        
+
+        <Button
+            android:id="@+id/y_chaxun"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            android:text="GO"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    
+    
+
+</LinearLayout>

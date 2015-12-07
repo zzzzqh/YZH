@@ -1,0 +1,51 @@
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#778899"
+    android:orientation="vertical"
+    tools:context="com.example.text.Ymain" >
+    
+     <include layout="@layout/ytop" />
+
+    <LinearLayout
+        android:id="@+id/ymain_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="495dp"
+        android:background="@drawable/login_layout_editor_bg"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/y_kkjhs"
+            android:layout_width="wrap_content"
+            android:layout_height="370dp" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/id_y_tab_gengxin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/id_y_tab_gengxin_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:src="@drawable/gengxinjihuashu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/y_gengxinjihuashu"
+                android:textColor="#ff111111"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
