@@ -103,7 +103,7 @@ public class Ymain extends Activity implements OnClickListener{
 		gengxinjiahuashu = (ImageButton) tab01.findViewById(R.id.id_y_tab_gengxin_img);
 		weixuakejiaoshi=(ImageButton) tab02.findViewById(R.id.id_y_tab_weixuankejiaoshi_img);
 		daochukebiao=(ImageButton) tab02.findViewById(R.id.id_tab_daochukebiao_img);
-		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_tab_xiugai_img);
+		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_y_change_img);
 		tianjiyonghu=(ImageButton) tab04.findViewById(R.id.id_y_tab_tianjiayonghu_img);
 		shanchuyonghu=(ImageButton) tab04.findViewById(R.id.id_y_tab_shanchuyonghu_img);
 		xiugaiyonghu=(ImageButton) tab04.findViewById(R.id.id_y_tab_xiugaiyonghu_img);
@@ -198,7 +198,7 @@ public class Ymain extends Activity implements OnClickListener{
 			Ymain.this.startActivity(intent);
 	
 			break;
-		case R.id.id_tab_xiugai_img://点击开课计划书按钮跳转到修改个人信息界面
+		case R.id.id_y_change_img://点击开课计划书按钮跳转到修改个人信息界面
 			 intent=new Intent(Ymain.this,Yidentity.class);
 			Ymain.this.startActivity(intent);
 	

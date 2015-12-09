@@ -131,20 +131,19 @@ public class MainActivity extends Activity {
 	                	 }
 	                	 else{
 	                		 
-//		                	 if(!pw.equals(p1)){
-//		                	 Toast.makeText(MainActivity.this, "帐号密码错误", 1).show();		                	 
-//		                	 }
-//		                	 else{
-//		                		 if("教师".equals(qx)){
-//		                		 Intent intent=new Intent(MainActivity.this,Tmain.class);
-//		                		 MainActivity.this.startActivity(intent);
-//		                		 }
-//		                		 else if("系负责人".equals(qx)){
-//		                		 
-//		                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
-//		                			 MainActivity.this.startActivity(intent);
-//		                		 }
-		                		 //else 
+		                	 if(!pw.equals(p1)){
+		                	 Toast.makeText(MainActivity.this, "帐号密码错误", 1).show();		                	 
+		                	 }
+		                	 else if("教师".equals(qx)){
+		                		 Intent intent=new Intent(MainActivity.this,Tmain.class);
+		                		 MainActivity.this.startActivity(intent);
+		                		 }
+		                		 else if("系负责人".equals(qx)){
+		                		 
+		                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
+		                			 MainActivity.this.startActivity(intent);
+		                		 }
+		                		 else 
 		                			 if("教学办".equals(qx)){
 		                			 Intent intent=new Intent(MainActivity.this,Ymain.class);
 		                			 MainActivity.this.startActivity(intent);

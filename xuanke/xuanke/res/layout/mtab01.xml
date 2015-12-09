@@ -1,0 +1,29 @@
+<LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#778899"
+    android:orientation="vertical"
+    tools:context="com.example.text.Mmain" >
+    
+     <include layout="@layout/ytop" />
+
+    <LinearLayout
+        android:id="@+id/ymain_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="495dp"
+        android:background="@drawable/login_layout_editor_bg"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/y_kkjhs"
+            android:layout_width="wrap_content"
+            android:layout_height="370dp" >
+        </ListView>
+
+ 
+
+    </LinearLayout>
+
+</LinearLayout>

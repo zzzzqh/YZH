@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@color/background"
+    tools:context="com.example.text.tmanagerclass" >
+ <LinearLayout
+          android:id="@+id/ymanageclass_title"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:singleLine="true"
+              android:text="@string/y_xuankeguanli"
+              android:textColor="@android:color/black"
+              android:textSize="15sp" />
+      </LinearLayout>
+
+
+       <LinearLayout
+           android:id="@+id/ymanageclass_edit_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@+id/ymanageclass_title"
+           android:background="@drawable/login_layout_editor_bg"
+           android:orientation="vertical" >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/y_zhuanye"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/ymanageclass_zhuanye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/y_kechengming"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/ymanageclass_kechengming"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        
+
+ 
+     <LinearLayout
+          android:id="@+id/ymanageclass_button"
+          android:layout_above="@id/ymanageclass_edit_layout"
+          android:layout_marginTop="200dp"
+          android:layout_width="match_parent"
+          android:layout_height="100dp"
+          android:background="@drawable/login_layout_editor_bg"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+       
+     
+        
+        
+       <LinearLayout
+        android:id="@+id/id_tab_weixuankejiaoshi"
+        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+
+
+       
+    </LinearLayout>
+    </LinearLayout>
+     </LinearLayout>
+     
+</RelativeLayout>

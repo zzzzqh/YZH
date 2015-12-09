@@ -2,16 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" 
+    android:orientation="vertical" 
     xmlns:tools="http://schemas.android.com/tools">
 
+    <ImageView
+        android:id="@+id/y_fuda_img"
+        android:layout_marginTop="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/fuda1" />
+    
     <LinearLayout
         android:id="@+id/id_y_tab_tianjiayonghu"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="#fffcfcfc"
+        android:orientation="horizontal" >
 
         <ImageButton
             android:id="@+id/id_y_tab_tianjiayonghu_img"
@@ -21,21 +28,24 @@
             android:src="@drawable/tianjiayonghu" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/go"
+            android:gravity="center|left"
             android:text="添加用户"
             android:textColor="#ff000000"
             android:textSize="12sp" />
+
     </LinearLayout>
 
      <LinearLayout
         android:id="@+id/id_y_tab_shanchuyonghu"
-        android:layout_width="0dp"
-      
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical" >
+       android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/id_y_tab_tianjiayonghu"
+        android:layout_marginTop="10dp"
+        android:background="#fffcfcfc"
+        android:orientation="horizontal" >
 
         <ImageButton
             android:id="@+id/id_y_tab_shanchuyonghu_img"
@@ -45,20 +55,23 @@
             android:src="@drawable/shanchuyonghu" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/go"
+            android:gravity="center|left"
             android:text="删除用户"
-            android:textSize="12sp"
-            android:textColor="#ff000000" />
+            android:textColor="#ff000000"
+            android:textSize="12sp" />
+
     </LinearLayout>
      <LinearLayout
         android:id="@+id/id_y_tab_xiugaiyonghu"
-        android:layout_width="0dp"
-      
-        android:layout_height="100dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+         android:layout_above="@+id/id_y_tab_shanchuyonghu"
+        android:layout_marginTop="10dp"
+        android:background="#fffcfcfc"
+        android:orientation="horizontal" >
 
         <ImageButton
             android:id="@+id/id_y_tab_xiugaiyonghu_img"
@@ -68,11 +81,14 @@
             android:src="@drawable/xiugaiyonghu" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableRight="@drawable/go"
+            android:gravity="center|left"
             android:text="修改用户"
-            android:textSize="12sp"
-            android:textColor="#ff000000" />
+            android:textColor="#ff000000"
+            android:textSize="12sp" />
+
     </LinearLayout>
     
     

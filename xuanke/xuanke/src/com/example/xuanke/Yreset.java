@@ -57,8 +57,22 @@ public class Yreset extends Activity {
 	String suoshuyuan=null;
 	
 	String quanxian=null;
-	private ListView y_xinxi;
-	private List<String> list=new ArrayList<String>();
+	private ListView y_xm;
+	private ListView y_mm;
+	private ListView y_pf;
+	private ListView y_em;
+	private ListView y_ph;
+	private ListView y_sex;
+	private ListView y_age;
+	
+	private List<String> xm=new ArrayList<String>();
+	private List<String> mm=new ArrayList<String>();
+	private List<String> pf=new ArrayList<String>();
+	private List<String> em=new ArrayList<String>();
+	private List<String> ph=new ArrayList<String>();
+	private List<String> s=new ArrayList<String>();
+	private List<String> ag=new ArrayList<String>();
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -66,10 +80,17 @@ public class Yreset extends Activity {
 		querenxiugai=(Button) findViewById(R.id.ybutton10);
 		fanhui=(Button) findViewById(R.id.ybutton11);
 		
-        y_xinxi=(ListView) findViewById(R.id.y_xinxi);
+        y_xm=(ListView) findViewById(R.id.yreset_name);
+        y_mm=(ListView) findViewById(R.id.yreset_mima);
+        y_pf=(ListView) findViewById(R.id.yreset_xueyuan);
+        y_em=(ListView) findViewById(R.id.yreset_email);
+        y_ph=(ListView) findViewById(R.id.yreset_phone);
+        y_sex=(ListView) findViewById(R.id.yreset_sex);
+        y_age=(ListView) findViewById(R.id.yreset_age);
+        
 		
 
-       Intent intent = this.getIntent();
+        Intent intent = this.getIntent();
 		Bundle c = intent.getBundleExtra("data");
 		password=c.getString("yidentity_password");
 		professical=c.getString("y_xueyuan");
@@ -77,14 +98,14 @@ public class Yreset extends Activity {
 		sex=c.getString("sex");
 		email=c.getString("y_email");
 		phone=c.getString("yphone_number");
-		list.add("新密码："+password);
-		list.add( "专业方向:"+professical);
-		list.add("年龄："+age);
-		list.add("性别："+sex);
-		list.add("邮箱："+email);
-		list.add("手机号码："+phone);
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked, list);
-		y_xinxi.setAdapter(adapter);
+		mm.add("新密码："+password);
+		pf.add( "专业方向:"+professical);
+		ag.add("年龄："+age);
+		s.add("性别："+sex);
+		em.add("邮箱："+email);
+		ph.add("手机号码："+phone);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_checked, pf);
+		y_pf.setAdapter(adapter);
 	
 		
 		querenxiugai.setOnClickListener(new OnClickListener() {

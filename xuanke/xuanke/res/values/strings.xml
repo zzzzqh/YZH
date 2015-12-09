@@ -12,6 +12,15 @@
     <string name="y_kechengming">课程名</string>
     <string name="y_unchooseteacher">未选课教师</string>
     <string name="y_daochukebiao">导出课表</string>
+     <string name="personal_message">个人信息</string>
+     <string name="name">姓名</string>
+     <string name="old_password">初始密码</string>
+     <string name="change">修改</string>
+     <string name="new_password">新密码</string>
+     <string name="change_queren">确认修改</string>
+     <string name="y_chaxun">查询</string>
+     <string name="back">返回</string>
+     <string name="y_tijiaoshenhe">提交审核</string>
     <string name="title_activity_ytab01">YTab01</string>
     <string name="title_activity_yupdateplan">Yupdateplan</string>
     <string name="title_activity_yunteacher">Yunteacher</string>

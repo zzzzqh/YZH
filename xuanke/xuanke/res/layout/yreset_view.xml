@@ -11,7 +11,7 @@
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@color/purple"
+        android:background="@android:color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -21,7 +21,7 @@
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:text="修改个人信息"
-            android:textColor="@android:color/white"
+            android:textColor="#ff000000"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -29,40 +29,265 @@
          android:id="@+id/yreset_edit_layout"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:layout_above="@+id/ybutton11"
-         android:layout_alignParentLeft="true"
          android:layout_below="@+id/yreset_title"
+         android:layout_marginLeft="13dp"
+         android:layout_marginRight="13dp"
+         android:layout_marginTop="10dp"
          android:background="@drawable/login_layout_editor_bg"
          android:orientation="vertical" >
 
-         <ListView
-            android:id="@+id/y_xinxi"
-            android:layout_width="wrap_content"
-            android:layout_height="347dp" >
-        </ListView>
-     </LinearLayout>
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
 
-     <Button
-         android:id="@+id/ybutton11"
-         android:layout_width="160dp"
-         android:layout_height="42dp"
-         android:layout_alignBaseline="@+id/ybutton10"
-         android:layout_alignBottom="@+id/ybutton10"
-         android:layout_toRightOf="@+id/ybutton10"
-         android:background="@color/purple"
-         android:text="返回"
-         android:textColor="@android:color/white"
-         android:textSize="15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/name"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
 
-     <Button
-         android:id="@+id/ybutton10"
-         android:layout_width="160dp"
-         android:layout_height="42dp"
-         android:layout_alignParentBottom="true"
-         android:layout_alignParentLeft="true"
-         android:background="@color/purple"
-         android:text="确认修改"
-         android:textColor="@android:color/white"
-         android:textSize="15sp" />
+                <ListView
+                    android:id="@+id/yreset_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/new_password"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yreset_mima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+           
+            
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/resource_y"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yreset_xueyuan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+               
+            </LinearLayout>
+             
+            
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+             
+            
+              
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/age"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yreset_age"
+                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"  >
+                </ListView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:text="@string/sex"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                    <ListView
+                        android:id="@+id/yreset_sex"
+                         android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                        
+                    </ListView>
+
+            </LinearLayout>
+              
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+   
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/email"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yreset_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+            
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+                
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/phone"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yreset_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:layout_marginBottom="28dp"
+      android:orientation="horizontal" >
+
+      <LinearLayout
+          android:id="@+id/yreset_queren"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+          <ImageButton
+              android:id="@+id/ybutton10"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/xiugai" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/change_queren"
+              android:textColor="#ff000000"
+              android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/yreset_back"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+          <ImageButton
+              android:id="@+id/ybutton11"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/menu_back" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/back"
+              android:textColor="#ff000000"
+              android:textSize="12sp" />
+      </LinearLayout>
+  </LinearLayout>
 
 </RelativeLayout>

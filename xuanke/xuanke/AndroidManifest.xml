@@ -74,6 +74,14 @@
             android:name=".Youtput"
             android:label="@string/title_activity_youtput" >
         </activity>
+        <activity
+            android:name=".Mmain"
+            android:label="@string/title_activity_mmain" >
+        </activity>
+        <activity
+            android:name=".Tmain"
+            android:label="@string/title_activity_tmain" >
+        </activity>
     </application>
 
 </manifest>
