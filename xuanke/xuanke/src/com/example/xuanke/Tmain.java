@@ -87,7 +87,7 @@ public class Tmain extends Activity implements OnClickListener{
 		
 		
 		
-		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_tab_xiugai_img);
+		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_y_change_img);
 		
 		
 		yViews.add(tab01);
@@ -152,8 +152,8 @@ public class Tmain extends Activity implements OnClickListener{
 
 		
 		
-		case R.id.id_tab_xiugai_img://点击开课计划书按钮跳转到修改个人信息界面
-			Intent intent=new Intent(Tmain.this,Yidentity.class);
+		case R.id.id_y_change_img://点击开课计划书按钮跳转到修改个人信息界面
+			Intent intent=new Intent(Tmain.this,Tidentity.class);
 			Tmain.this.startActivity(intent);
 	
 			break;

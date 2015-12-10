@@ -82,6 +82,22 @@
             android:name=".Tmain"
             android:label="@string/title_activity_tmain" >
         </activity>
+        <activity
+            android:name=".Tidentity"
+            android:label="@string/title_activity_tidentity" >
+        </activity>
+        <activity
+            android:name=".Midentity"
+            android:label="@string/title_activity_midentity" >
+        </activity>
+        <activity
+            android:name=".Treset"
+            android:label="@string/title_activity_treset" >
+        </activity>
+        <activity
+            android:name=".Mreset"
+            android:label="@string/title_activity_mreset" >
+        </activity>
     </application>
 
 </manifest>
