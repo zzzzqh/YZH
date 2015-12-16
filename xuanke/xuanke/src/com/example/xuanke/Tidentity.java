@@ -53,9 +53,9 @@ public class Tidentity extends Activity {
 		t_professical_aspect1=(Spinner) findViewById(R.id.t_professical_aspect1);
 		
 		user u=new user();
-		//String xingming=u.getName();
+		String xingming=u.getName();
 		String mima=u.getMima();
-		//tv1.setText("姓名:"+ xingming);
+		tv1.setText("姓名:"+ xingming);
 		tv2.setText("原始密码:"+ mima);
 		
 	    list.add("计算机(实验班)");

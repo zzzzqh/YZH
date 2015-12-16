@@ -32,12 +32,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class Yadduser_1 extends Activity{
 	
-	private Button queren,quxiao;
+	private ImageButton queren,quxiao;
 	private ListView adduser_xinxi;
 	
 	String zhigonghao;
@@ -51,9 +52,9 @@ public class Yadduser_1 extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.yadduser_1);
 		
-		adduser_xinxi =(ListView) findViewById(R.id.adduser_xinxi);
-		queren=(Button) findViewById(R.id.adduser_1_button1);
-		quxiao=(Button) findViewById(R.id.adduser_1_button2);
+		adduser_xinxi =(ListView) findViewById(R.id.y_adduser_xinxi);
+		queren=(ImageButton) findViewById(R.id.y_yhgl_add_1);
+		quxiao=(ImageButton) findViewById(R.id.y_yhgl_back_1);
 		
 		Intent intent= this.getIntent();
 		Bundle b = intent.getBundleExtra("data");

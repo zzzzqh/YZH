@@ -7,21 +7,21 @@
 
     <LinearLayout
         android:id="@+id/yadduser_title"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/purple"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+         android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:text="添加用户"
-            android:textColor="@android:color/white"
+            android:text="@string/y_yhgl_adduser"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -30,8 +30,8 @@
         android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/yadduser_title"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/login_layout_editor_bg"
             android:orientation="vertical" >
@@ -48,12 +48,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/user_name"
+                    android:text="@string/y_yhgl_yhm"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
                 
                  <EditText
-                    android:id="@+id/yadduser_zhigonghao"
+                    android:id="@+id/y_yhgl_adduser_yhm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
@@ -81,12 +81,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/total_name"
+                    android:text="@string/y_yhgl_name"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
                 
                  <EditText
-                    android:id="@+id/yadduser_name"
+                    android:id="@+id/y_yhgl_adduser_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
@@ -114,9 +114,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="初始密码"
+                    android:text="@string/y_yhgl_chushimima"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
+                
                  <EditText
                     android:id="@+id/yadduser_password"
                     android:layout_width="match_parent"
@@ -148,7 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="用户权限"
+                    android:text="@string/y_yhgl_power"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
                   
@@ -178,9 +179,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/phone"
+                    android:text="@string/y_yhgl_phone"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
+                
                  <EditText
                     android:id="@+id/yadduser_phone"
                     android:layout_width="match_parent"
@@ -194,29 +196,63 @@
                 </LinearLayout>
             
     </LinearLayout>
+    
+     <LinearLayout
+            android:id="@+id/y_yhgl_adduser_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/ybutton15"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/ybutton16"
-        android:layout_weight="241.96"
-        android:background="@color/purple"
-        android:text="确认添加"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+            <LinearLayout
+                android:id="@+id/id_tab_add"
+                android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+                 
+                <ImageButton
+                    android:id="@+id/y_yhgl_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff000000"
+                    android:src="@drawable/adduser" />
 
-    <Button
-        android:id="@+id/ybutton16"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/purple"
-        android:text="返回"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_add"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_y_yhgl_back"
+                 android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/y_yhgl_add_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_back"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
 
 </RelativeLayout>

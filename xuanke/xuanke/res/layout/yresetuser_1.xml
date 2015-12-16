@@ -10,37 +10,57 @@
      <LinearLayout
         android:id="@+id/yresetuser_title_1"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/purple"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:text="修改用户信息"
-            android:textColor="@android:color/white"
+            android:text="@string/y_yhgl_xiugai"
             android:textSize="15sp" />
     </LinearLayout>
     
+    
       <LinearLayout
-            android:id="@+id/yidentity_edit_layout_1"
+            android:id="@+id/y_yhgl_del_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/yresetuser_title_1"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/login_layout_editor_bg"
             android:orientation="vertical" >
-             
-          <ListView
+          
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/y_yhgl_yhm"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />    
+          
+                  <ListView
               android:id="@+id/yresetuser_xinxi"
               android:layout_width="312dp"
-              android:layout_height="101dp" />
+              android:layout_height="47dp" 
+              />
+          </LinearLayout>
+                  
           <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -58,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="@string/total_name"
+                    android:text="@string/y_yhgl_name"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
                 
@@ -71,11 +91,7 @@
                     android:ems="10"
                     android:singleLine="true" ></EditText>
                 
-                
-                
-                
-
-            </LinearLayout>
+     </LinearLayout>
               
             <View
                 android:layout_width="match_parent"
@@ -94,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="密码"
+                    android:text="@string/y_yhgl_mima"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
                 
@@ -128,17 +144,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="用户权限"
+                    android:text="@string/y_yhgl_power"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
-
-                <EditText
+                
+                 <EditText
                     android:id="@+id/yresetuser_quanxain_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:background="#fffbfbfb"
-                    android:singleLine="true" />
+                    android:singleLine="true" />             
             </LinearLayout>
             
                 <View
@@ -146,43 +162,67 @@
                 android:layout_height="1dp"
                 android:background="#ffc8c8c8" />
                 
-             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="47dp"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal" >
-
-                
-            </LinearLayout>
+             
   </LinearLayout>
 
-
-
-        <Button
-            android:id="@+id/yresetuser_1_button2"
-            android:layout_width="80dp"
-            android:layout_height="42dp"
-            android:layout_alignBaseline="@+id/yresetuser_1_button1"
-            android:layout_alignBottom="@+id/yresetuser_1_button1"
-            android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/yresetuser_1_button1"
-            android:background="@color/purple"
-            android:text="取消"
-            android:textColor="@android:color/white"
-            android:textSize="15sp" />
-
-        <Button
-            android:id="@+id/yresetuser_1_button1"
-            android:layout_width="160dp"
-            android:layout_height="42dp"
+   <LinearLayout
+            android:id="@+id/y_yhgl_change_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:background="@color/purple"
-            android:text="确认修改"
-            android:textColor="@android:color/white"
-            android:textSize="15sp" />
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="horizontal" >
+
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+                 
+                <ImageButton
+                    android:id="@+id/y_yhgl_change_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff000000"
+                    android:src="@drawable/changeuser" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_querenchange"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                 android:layout_width="0dp"
+                 android:layout_height="fill_parent"
+                 android:layout_gravity="center_vertical"
+                 android:layout_weight="1"
+                 android:gravity="center"
+                 android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/y_yhgl_back_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff000000"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_quxiao"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+      
+
+        
     
     </RelativeLayout>
 

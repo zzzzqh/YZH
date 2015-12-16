@@ -119,6 +119,13 @@
                    android:textColor="#ff000000"
                    android:textSize="12sp" />
            </LinearLayout>
+
+           <ListView
+               android:id="@+id/listView1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" >
+           </ListView>
+
   </LinearLayout>
 
            <LinearLayout

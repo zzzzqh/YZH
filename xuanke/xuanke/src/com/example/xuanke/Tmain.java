@@ -15,8 +15,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Tmain extends Activity implements OnClickListener{
 
@@ -30,7 +34,19 @@ public class Tmain extends Activity implements OnClickListener{
 	private ImageButton ykaikexinxiImg;
 	private ImageButton yxuankeguanliImg;
 	private ImageButton ygerenshezhiImg;
-	
+	private Spinner xuenian;
+	private Spinner xueqi;
+	private List<String> list=new ArrayList<String>();
+	private ArrayAdapter<String> adapter;
+	private List<String> list1=new ArrayList<String>();
+	private ArrayAdapter<String> adapter1;
+	private Spinner zhuanye;
+	private List<String> list2=new ArrayList<String>();
+	private ArrayAdapter<String> adapter2;
+	private Button go;
+	private String xq;
+	private String xn;
+	private String zy;
 	//定义tab上的imagebutton事件监听器
 	
 
@@ -52,7 +68,7 @@ public class Tmain extends Activity implements OnClickListener{
 		
 		 //声明imagebutton的监听事件
 		 
-		
+		 go.setOnClickListener(this);
 		 xiugaixinxi.setOnClickListener(this);
 		 
 		
@@ -86,10 +102,35 @@ public class Tmain extends Activity implements OnClickListener{
 		 */
 		
 		
-		
+		go=(Button)tab01.findViewById(R.id.y_chaxun);
 		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_y_change_img);
-		
-		
+		xuenian=(Spinner) tab01.findViewById(R.id.y_xuenian);
+		list.add("2014"); 
+		list.add("2015");
+		list.add("2016"); 
+		list.add("2017"); 
+		list.add("2018"); 
+		adapter=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
+	    xuenian.setAdapter(adapter);
+		xueqi=(Spinner) tab01.findViewById(R.id.y_xueqi);
+		list1.add("第一学期");
+		list1.add("第二学期");
+		list1.add("第三学期");
+		adapter1=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list1);
+        adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
+	    xueqi.setAdapter(adapter1);
+	    zhuanye=(Spinner) tab01.findViewById(R.id.y_zhuanye);
+		list2.add("计算机（实验班）");
+		list2.add("计算机（卓越班）");
+		list2.add("计算机");
+		list2.add("软件工程");
+		list2.add("数学类（实验班）");
+		list2.add("网络工程");
+		list2.add("信息安全");
+		adapter2=new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list2);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
+	    zhuanye.setAdapter(adapter2);
 		yViews.add(tab01);
 		yViews.add(tab02);
 		yViews.add(tab03);
@@ -147,11 +188,13 @@ public class Tmain extends Activity implements OnClickListener{
 			Yviewpager.setCurrentItem(2);
 			
 			break;
-		
-		
+		case R.id.y_chaxun://点击开课计划书按钮跳转到修改个人信息界面
+			xq=xueqi.getSelectedItem().toString();
+			xn=xuenian.getSelectedItem().toString();
+			zy=zhuanye.getSelectedItem().toString();
+			Toast.makeText(Tmain.this, xq+" "+xn+""+zy, 1).show();
+			break;
 
-		
-		
 		case R.id.id_y_change_img://点击开课计划书按钮跳转到修改个人信息界面
 			Intent intent=new Intent(Tmain.this,Tidentity.class);
 			Tmain.this.startActivity(intent);

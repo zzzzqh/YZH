@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:text="课程信息"
+            android:text="显示本课程报课老师名单"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
     </LinearLayout>

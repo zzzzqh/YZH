@@ -2,73 +2,74 @@ package com.example.sql;
 
 public class user {
 	public static String zhanghao;
-	public static String xingming;
+	public static String name;
 	public static String mima;
-	public static String suoshuyuan;
-	public static String suoshuxi;
-	public static String xingbie;
-	public static String nianlin;
-	public static String youxiang;
-	public static String shouji;
-	public static String quanxian;
+	public static String yuan;
+	public static String xi;
+	public static String sex;
+	public static String age;
+	public static String email;
+	public static String telephone;
+	public static String type;
 	
 	public static String getZhanghao() {
 		return zhanghao;
 	}
-	public static String getXingming() {
-		return xingming;
+	public static String getName() {
+		return name;
 	}
 	public static String getMima() {
 		return mima;
 	}
-	public static String getSuoshuyuan() {
-		return suoshuyuan;
+	public static String getYuan() {
+		return yuan;
 	}
-	public static String getSuoshuxi() {
-		return suoshuxi;
+	public static String getXi() {
+		return xi;
 	}
-	public static String getNianlin() {
-		return nianlin;
+	public static String getAge() {
+		return age;
 	}
-	public static String getYouxiang() {
-		return youxiang;
+	public static String getEmail() {
+		return email;
 	}
-	public static String getShouji() {
-		return shouji;
+	public static String getTelephone() {
+		return telephone;
 	}
-	public static String getQuanxian() {
-		return quanxian;
-	}public static String getXingbie() {
-		return xingbie;
+	public static String getType() {
+		return type;
 	}
-	public static void setNianlin(String nianlin) {
-		user.nianlin = nianlin;
+	public static String getSex() {
+		return sex;
+	}
+	public static void setAge(String age) {
+		user.age = age;
 	}
 	public static void setZhanghao(String zhanghao) {
 		user.zhanghao = zhanghao;
 	}
-	public static void setXingming(String xingming) {
-		user.xingming = xingming;
+	public static void setName(String name) {
+		user.name = name;
 	}
 	public static void setMima(String mima) {
 		user.mima = mima;
 	}
-	public static void setQuanxian(String quanxian) {
-		user.quanxian = quanxian;
+	public static void setType(String type) {
+		user.type = type;
 	}
-	public static void setShouji(String shouji) {
-		user.shouji = shouji;
+	public static void setTelephone(String telephone) {
+		user.telephone = telephone;
 	}
-	public static void setSuoshuxi(String suoshuxi) {
-		user.suoshuxi = suoshuxi;
+	public static void setXi(String xi) {
+		user.xi = xi;
 	}
-	public static void setSuoshuyuan(String suoshuyuan) {
-		user.suoshuyuan = suoshuyuan;
+	public static void setYuan(String yuan) {
+		user.yuan = yuan;
 	}
-	public static void setXingbie(String xingbie) {
-		user.xingbie = xingbie;
+	public static void setSex(String sex) {
+		user.sex = sex;
 	}
-	public static void setYouxiang(String youxiang) {
-		user.youxiang = youxiang;
+	public static void setEmail(String email) {
+		user.email = email;
 	}
 }

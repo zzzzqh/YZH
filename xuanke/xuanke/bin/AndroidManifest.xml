@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -97,6 +98,26 @@
         <activity
             android:name=".Mreset"
             android:label="@string/title_activity_mreset" >
+        </activity>
+        <activity
+            android:name=".Yupdataplan"
+            android:label="@string/title_activity_yupdataplan" >
+        </activity>
+        <activity
+            android:name=".Mmanagerclass_1"
+            android:label="@string/title_activity_mmanagerclass_1" >
+        </activity>
+        <activity
+            android:name=".Mmanagerclass_2"
+            android:label="@string/title_activity_mmanagerclass_2" >
+        </activity>
+        <activity
+            android:name=".Taddclass"
+            android:label="@string/title_activity_taddclass" >
+        </activity>
+        <activity
+            android:name=".Teacherxinxi"
+            android:label="@string/title_activity_teacherxinxi" >
         </activity>
     </application>
 

@@ -12,7 +12,7 @@
         android:layout_height="45dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@color/purple"
+        android:background="@android:color/white"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -22,7 +22,7 @@
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:text="个人信息"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="15sp" />
     </LinearLayout>
     
@@ -291,27 +291,30 @@
             </LinearLayout>
   </LinearLayout>
 
-           <Button
-                 android:id="@+id/ybutton9"
-                   android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/purple"
-        android:text="返回"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+          
 
-    <Button
-        android:id="@+id/ybutton8"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/ybutton9"
-        android:background="@color/purple"
-        android:text="修改"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
-   
+          <LinearLayout
+         android:id="@+id/id_tab_xiugai"
+         android:layout_width="fill_parent"
+         android:layout_height="70dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:gravity="center"
+         android:orientation="vertical" >
+
+         <ImageButton
+             android:id="@+id/ybutton8"
+             android:layout_width="145dp"
+             android:layout_height="wrap_content"
+             android:background="@color/background"
+             android:src="@drawable/xiugai" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/y_grgl_change_queren"
+             android:textColor="#ff000000"
+             android:textSize="12sp" />
+     </LinearLayout>
 
 </RelativeLayout>

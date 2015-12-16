@@ -113,97 +113,97 @@ public class Yreset extends Activity {
 			@Override
 			public void onClick(View v) {
 				user u=new user();
-//				xingming=u.getName();
-//				
-//				 zhanghao=u.getZhanghao();
-//				
-//				 suoshuyuan=u.getYuan();
-//				
-//				 quanxian=u.getType();
+				xingming=u.getName();
+				
+				 zhanghao=u.getZhanghao();
+				
+				 suoshuyuan=u.getYuan();
+				
+				 quanxian=u.getType();
 			
-//				if(password.isEmpty()){
-//					String mima=u.getMima();
-//					password=mima;
-//					
-//				}
-//				 
-//				if(professical.isEmpty())
-//				{
-//					String suoshuxi=u.getXi();
-//					professical=suoshuxi;
-//				}
-//				
-//				if(age.isEmpty())
-//				{
-//					String nianlin=u.getAge();
-//					age=nianlin;
-//					
-//				}
-//				
-//				if(sex.isEmpty())
-//				{
-//					String xingbie=u.getSex();
-//					sex=xingbie;
-//				}
-//				 
-//				if(email.isEmpty())
-//				{
-//					String youxiang=u.getEmail();
-//					email=youxiang;
-//				}
-//				
-//				if(phone.isEmpty())
-//				{
-//					String shouji=u.getTelephone();
-//					phone=shouji;
-//				}
-//				new AsyncTask<String, Void, Void>(){
-//
-// 					@Override
-// 					protected Void doInBackground(String... params) {
-// 					String url="http://115.28.69.231/android/changgeoneself.php";
-// 						HttpPost httprequest=new HttpPost(url);
-// 						List<NameValuePair>param=new ArrayList<NameValuePair>();
-// 						param.add(new BasicNameValuePair("zhanggao",zhanghao));
-// 						param.add(new BasicNameValuePair("mima", password));
-// 						param.add(new BasicNameValuePair("name",xingming));
-// 						param.add(new BasicNameValuePair("yuan",suoshuyuan));
-// 						param.add(new BasicNameValuePair("xi", professical));
-// 						param.add(new BasicNameValuePair("age", age));
-// 						param.add(new BasicNameValuePair("sex", sex));
-// 						param.add(new BasicNameValuePair("email", email));
-// 						param.add(new BasicNameValuePair("telephone", phone));
-// 						try {
-//							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
-//							httprequest.setEntity(httpEntity);
-// 							HttpClient httpClient=new DefaultHttpClient();
-// 							HttpResponse httpResponse=httpClient.execute(httprequest);
-// 							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
-// 								String result=EntityUtils.toString(httpResponse.getEntity());
-// 								if(result.equals("success")){
-// 									Toast.makeText(Yreset.this, "修改成功", 1).show();
-// 								}
-// 							}
-//						} catch (UnsupportedEncodingException e) {
-//							// TODO Auto-generated catch block
-//							e.printStackTrace();
-//						} catch (ClientProtocolException e) {
-//							// TODO Auto-generated catch block
-//							e.printStackTrace();
-//						} catch (IOException e) {
-//							// TODO Auto-generated catch block
-//							e.printStackTrace();
-//						}
-// 						return null;
-// 						
-// 					}
-// 					
-// 				}.execute("http://115.28.69.231/index.php");
-//
-//				
-//			
-//				
-//				 
+				if(password.isEmpty()){
+					String mima=u.getMima();
+					password=mima;
+					
+				}
+				 
+				if(professical.isEmpty())
+				{
+					String suoshuxi=u.getXi();
+					professical=suoshuxi;
+				}
+				
+				if(age.isEmpty())
+				{
+					String nianlin=u.getAge();
+					age=nianlin;
+					
+				}
+				
+				if(sex.isEmpty())
+				{
+					String xingbie=u.getSex();
+					sex=xingbie;
+				}
+				 
+				if(email.isEmpty())
+				{
+					String youxiang=u.getEmail();
+					email=youxiang;
+				}
+				
+				if(phone.isEmpty())
+				{
+					String shouji=u.getTelephone();
+					phone=shouji;
+				}
+				new AsyncTask<String, Void, Void>(){
+
+ 					@Override
+ 					protected Void doInBackground(String... params) {
+ 					String url="http://115.28.69.231/android/changgeoneself.php";
+ 						HttpPost httprequest=new HttpPost(url);
+ 						List<NameValuePair>param=new ArrayList<NameValuePair>();
+ 						param.add(new BasicNameValuePair("zhanggao",zhanghao));
+ 						param.add(new BasicNameValuePair("mima", password));
+ 						param.add(new BasicNameValuePair("name",xingming));
+ 						param.add(new BasicNameValuePair("yuan",suoshuyuan));
+ 						param.add(new BasicNameValuePair("xi", professical));
+ 						param.add(new BasicNameValuePair("age", age));
+ 						param.add(new BasicNameValuePair("sex", sex));
+ 						param.add(new BasicNameValuePair("email", email));
+ 						param.add(new BasicNameValuePair("telephone", phone));
+ 						try {
+							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
+							httprequest.setEntity(httpEntity);
+ 							HttpClient httpClient=new DefaultHttpClient();
+ 							HttpResponse httpResponse=httpClient.execute(httprequest);
+ 							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
+ 								String result=EntityUtils.toString(httpResponse.getEntity());
+ 								if(result.equals("success")){
+ 									Toast.makeText(Yreset.this, "修改成功", 1).show();
+ 								}
+ 							}
+						} catch (UnsupportedEncodingException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (ClientProtocolException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+ 						return null;
+ 						
+ 					}
+ 					
+ 				}.execute("http://115.28.69.231/index.php");
+
+				
+			
+				
+				 
 				
 				Yreset.this.finish();
 			}

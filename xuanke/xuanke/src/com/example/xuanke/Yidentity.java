@@ -31,7 +31,7 @@ import android.widget.Toast;
 public class Yidentity extends Activity {
 
 	private Button xiugai;
-	private Button fanhui;
+	//private Button fanhui;
 	private TextView tv1;
 	private TextView tv2;
 	private EditText yidentity_password,yidentity_age,y_email,yphone_number;
@@ -47,7 +47,7 @@ public class Yidentity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.yidentity_view);
 		xiugai=(Button) findViewById(R.id.ybutton8);
-		fanhui=(Button) findViewById(R.id.ybutton9);
+		//fanhui=(Button) findViewById(R.id.ybutton9);
 		tv1=(TextView) findViewById(R.id.yidentity_zhanghao);
 		tv2=(TextView) findViewById(R.id.yidentity_mima);
 		yidentity_password=(EditText) findViewById(R.id.yidentity_password);
@@ -58,9 +58,9 @@ public class Yidentity extends Activity {
 		y_xueyuan=(Spinner) findViewById(R.id.y_xueyuan);
 //		
 		user u=new user();
-		//String xingming=u.getName();
+		String xingming=u.getName();
 		String mima=u.getMima();
-		//tv1.setText("姓名:"+ xingming);
+		tv1.setText("姓名:"+ xingming);
 		tv2.setText("原始密码:"+ mima);
 	    list.add("数计学院");
         list.add("机械学院");
@@ -101,16 +101,16 @@ public class Yidentity extends Activity {
 				Yidentity.this.startActivity(intent);
 			}
 		});
-		fanhui.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-//				Intent intent=new Intent(Yidentity.this,Ymain.class);
-//				Yidentity.this.startActivity(intent);
-				Yidentity.this.finish();
-			}
-		});
+//		fanhui.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+////				Intent intent=new Intent(Yidentity.this,Ymain.class);
+////				Yidentity.this.startActivity(intent);
+//				Yidentity.this.finish();
+//			}
+//		});
 	}
 	
 	

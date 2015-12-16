@@ -33,13 +33,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Ydeluser extends Activity {
 
-	private Button del;
-	private Button back;
+	private ImageButton del;
+	private ImageButton back;
 	private TextView yonghuming,xingming;
     String pw=null;
     String qx=null;
@@ -56,12 +57,12 @@ public class Ydeluser extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ydeluser_view);
-		del=(Button) findViewById(R.id.ybutton19);
-		back=(Button) findViewById(R.id.ybutton20);
+		del=(ImageButton) findViewById(R.id.y_yhgl_del_del);
+		back=(ImageButton) findViewById(R.id.y_yhgl_del_back);
 		
 		
 		yonghuming=(TextView) findViewById(R.id.ydeluser_user_name);
-		xingming=(TextView) findViewById(R.id.ydeluser_input_password);
+		xingming=(TextView) findViewById(R.id.ydeluser_name);
 		
 		
 		

@@ -9,49 +9,54 @@
     
      <LinearLayout
         android:id="@+id/yunteacher_title"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/purple"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+       android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
 
+         <ImageButton
+             android:id="@+id/y_unchooset_back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white"
+             android:src="@drawable/back" />
+         
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="238dp"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:text="未选课教师"
-            android:textColor="@android:color/white"
+            android:text="@string/y_unchooset_list"
             android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/y_unteacher_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/remind" />
+
     </LinearLayout>
     
        <LinearLayout
            android:id="@+id/yunteacher_edit_layout"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:layout_above="@+id/ybutton23"
            android:layout_alignParentLeft="true"
            android:layout_below="@+id/yunteacher_title"
            android:background="@drawable/login_layout_editor_bg"
            android:orientation="horizontal" >
-         <ListView
-          android:id="@+id/yunteacher_xinxi"
-          android:layout_width="wrap_content"
-          android:layout_height="372dp" >
+        
+           <ListView
+               android:id="@+id/yunteacher_xinxi"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent" >
+
       </ListView>
         
        </LinearLayout>
-
-    <Button
-        android:id="@+id/ybutton23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/purple"
-        android:text="返回" />
 
 </RelativeLayout>

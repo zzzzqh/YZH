@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Yupdateplan" >
+
+
+    <LinearLayout
+        android:id="@+id/yupdateplan_title"
+       android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="@string/y_gengxinjihuashu"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+      <LinearLayout
+             android:id="@+id/yupdateplan_edit_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/yupdateplan_title"
+             android:layout_marginTop="57dp"
+             android:background="@drawable/login_layout_editor_bg"
+             android:orientation="vertical" >
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="47dp"
+                 android:focusable="true"
+                 android:focusableInTouchMode="true"
+                 android:gravity="center_vertical"
+                 android:orientation="horizontal" >
+
+                 <EditText
+                     android:id="@+id/yupdatepaln_way"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginRight="5dp"
+                     android:layout_weight="5"
+                     android:hint="@string/y_scanf_rightway"
+                     android:textColorHint="#ffbfbfbf"
+                     android:background="#fffbfbfb"
+                     android:singleLine="true" />
+
+                 <ImageButton
+                     android:id="@+id/y_updateplan_way"
+                     android:layout_width="wrap_content"
+                     android:layout_height="33dp"
+                     android:layout_marginLeft="10dp"
+                     android:background="@android:color/white"
+                     android:src="@drawable/way" />
+             </LinearLayout>
+             
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+            </LinearLayout>
+            
+        <LinearLayout
+             android:id="@+id/y_set"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/yupdateplan_edit_layout"
+             android:layout_marginTop="57dp"
+             android:background="@drawable/login_layout_editor_bg"
+             android:orientation="vertical" >
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                 <ImageButton
+                     android:id="@+id/y_xuanke_set"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@android:color/white"
+                     android:src="@drawable/set" />
+
+
+                <EditText
+                    android:id="@+id/xuanke_end_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/y_xuanke_enddata"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                
+                 <ImageButton
+                     android:id="@+id/y_shenhe_set"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@android:color/white"
+                     android:src="@drawable/set" />
+
+                <EditText
+                    android:id="@+id/shenhe_end_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:hint="@string/y_shenhe_enddata"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>              
+ </LinearLayout>
+ 
+        
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="55dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:background="@drawable/login_layout_editor_bg"
+      android:orientation="horizontal" >
+
+      <LinearLayout
+          android:id="@+id/yupdate_qd"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+          <ImageButton
+              android:id="@+id/y_update_qd"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/qd" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/y_update_qd"
+              android:textColor="#ff000000"
+              android:textSize="12sp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/yupdate_back"
+          android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+          <ImageButton
+              android:id="@+id/y_update_back"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/back" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/y_update_back"
+              android:textColor="#ff000000"
+              android:textSize="12sp" />
+      </LinearLayout>
+  </LinearLayout>
+
+         
+
+         
+             
+</RelativeLayout>
+
+    

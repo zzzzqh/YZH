@@ -6,22 +6,22 @@
     tools:context="com.example.text.Ydeluser" >
 
   <LinearLayout
-        android:id="@+id/ydelruser_title"
+        android:id="@+id/ydeluser_title"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/purple"
-        android:gravity="center_vertical"
-        android:orientation="horizontal" >
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
-            android:text="删除用户"
-            android:textColor="@android:color/white"
+            android:text="@string/y_yhgl_deluser"
             android:textSize="15sp" />
     </LinearLayout>
 
@@ -29,19 +29,11 @@
         android:id="@+id/ydeluser_edit_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/ybutton20"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/ydelruser_title"
-        android:background="@drawable/login_layout_editor_bg"
-        android:orientation="vertical" >
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/ydeluser_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/login_layout_editor_bg"
             android:orientation="vertical" >
 
@@ -57,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="用户名"
+                    android:text="@string/y_yhgl_yhm"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
 
@@ -85,46 +77,82 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="姓名"
+                    android:text="@string/y_yhgl_name"
                     android:textColor="@android:color/black"
                     android:textSize="17sp" />
 
                 <EditText
-                    android:id="@+id/ydeluser_input_password"
+                    android:id="@+id/ydeluser_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="#fffbfbfb"
-                    android:inputType="textPassword"
                     android:singleLine="true" />
 
    
             </LinearLayout>
         </LinearLayout>
         
-    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/y_yhgl_deluser_button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="horizontal" >
 
-    <Button
-        android:id="@+id/ybutton20"
-        android:layout_width="160dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/purple"
-        android:text="返回"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+            <LinearLayout
+                android:id="@+id/y_yhgl_del"
+                android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+                 
+                <ImageButton
+                    android:id="@+id/y_yhgl_del_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff000000"
+                    android:src="@drawable/deluser" />
 
-    <Button
-        android:id="@+id/ybutton19"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/ybutton20"
-        android:background="@color/purple"
-        android:text="删除"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_deluser"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_y_yhgl_back"
+                 android:layout_width="0dp"
+          android:layout_height="fill_parent"
+          android:layout_gravity="center_vertical"
+          android:layout_weight="1"
+          android:gravity="center"
+          android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/y_yhgl_del_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ff000000"
+                    android:src="@drawable/back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/y_yhgl_back"
+                    android:textColor="#ff000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    
+    
+    
+
 
 </RelativeLayout>

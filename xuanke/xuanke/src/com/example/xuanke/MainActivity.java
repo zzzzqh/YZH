@@ -21,22 +21,21 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.example.sql.user;
-//import com.example.text.MainActivity;
-//import com.example.text.Mmain;
-//import com.example.text.R;
-//import com.example.text.Tmain;
-//import com.example.text.Ymain;
+import com.example.xuanke.MainActivity;
 
+import android.R.string;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings.System;
+import android.util.JsonReader;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,46 +43,39 @@ import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
-	private Button bt0;
+
+	private Button denglu;
 	EditText username;
 	EditText password;
 	String user;
-	String pw;
+	
+	String n1,p1;
+    String mima=null;
+    String type=null;
+    String zhanghao=null;
+    String name=null;
+    String age=null;
+    String xi=null;
+    String email=null;
+    String yuan=null;
+    String sex=null;
+    String telephone=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        final SQLiteDatabase db=openOrCreateDatabase("user.db", MODE_ENABLE_WRITE_AHEAD_LOGGING, null);
-        db.execSQL("create table if not exists usertb(_id integer primary key autoincrement,zhanghao text not null,mima text not null,xingming text not null,suoshuyuan text not null,suoshuxi text null,xingbie text null,nianlin integer null,youxiang text null,shouji text null,quanxian text not null)");
-        //db.execSQL("create table clatb(_id integer primary key autoincrement,xuenian text not null,xueqi text not null, nianji integer not null,zhuanye text not null,zhuanyerenshu integer not null,kechengmingcheng text not null,xuanxiuleixing text not null,xuefen intger null,xueshi integer  null,shiyanxueshi integer  null,shangjixueshi integer  null)");
-        //db.execSQL("create table choosetb(_id integer primary key autoincrement,nianji integer not null,zhuanye text not null,kechengmingcheng text not null,xuanxiuleixing text not null,qiqizhouxu text null,renkejiaoshi text null,jiaocaimingcheng text null,ISBN text null,xuanyong text null,beizhu text null)");
-
-        db.execSQL("insert into usertb(zhanghao,mima,xingming,suoshuyuan,suoshuxi,xingbie,nianlin,youxiang,shouji,quanxian)values('031302307','123456','周子淇','数学与计算机科学学院','xx','xx',24,'xx','xx','教师')");
-        db.execSQL("insert into usertb(zhanghao,mima,xingming,suoshuyuan,suoshuxi,xingbie,nianlin,youxiang,shouji,quanxian)values('031302117','123456','苏逸豪','数学与计算机科学学院','xx','男',24,'510122600@qq.com','15659434690','教师')");
-        db.execSQL("insert into usertb(zhanghao,mima,xingming,suoshuyuan,suoshuxi,xingbie,nianlin,youxiang,shouji,quanxian)values('xifuzeren1','123456','陈志灏','数学与计算机科学学院','计算机系','男',24,'xx','xx','系负责人')");
-        db.execSQL("insert into usertb(zhanghao,mima,xingming,suoshuyuan,suoshuxi,xingbie,nianlin,youxiang,shouji,quanxian)values('yuanfuzeren1','123456','尤志明','数学与计算机科学学院','xx','男',24,'xx','xx','教学办')");
-        
-        bt0=(Button) findViewById(R.id.main_button0);
+     
+        denglu=(Button) findViewById(R.id.main_button0);
         username=(EditText) findViewById(R.id.main_user_name);
         password=(EditText) findViewById(R.id.main_input_password);
-        bt0.setOnClickListener(new OnClickListener() {
+        denglu.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				String n1=username.getText().toString().trim();
-	            String p1=password.getText().toString().trim();
-	            String pw=null;
-	            String qx=null;
-	            String zh=null;
-	            String xm=null;
-	            int nl=0;
-	            String sj=null;
-	            String yx=null;
-	            String sy=null;
-	            String sx=null;
-	            String sb=null;
+				 n1=username.getText().toString().trim();
+	             p1=password.getText().toString().trim();
+	     
 	            if(n1.equals("")|| p1.equals("")){
 					Toast.makeText(MainActivity.this, "请填写完整信息", 1).show();
 					Intent intent=new Intent(MainActivity.this,MainActivity.class);
@@ -91,75 +83,98 @@ public class MainActivity extends Activity {
 				}
 	            else
 	            {
-	            	Cursor c=db.rawQuery("select * from usertb where zhanghao=?", new String[]{n1});     	
-	            	if(c!=null){
-	                	 while (c.moveToNext()) {
-	                		 
-	                		  xm = c.getString(c.getColumnIndex("xingming")).trim();
-	                		  pw = c.getString(c.getColumnIndex("mima")).trim();
-	        				  qx = c.getString(c.getColumnIndex("quanxian")).trim();
-	        				  zh=c.getString(c.getColumnIndex("zhanghao")).trim();
-	        				 
-	        				  nl=c.getInt(c.getColumnIndex("nianlin"));
-	        				  
-	        				  sy=c.getString(c.getColumnIndex("suoshuyuan")).trim();
-	        				  
-	        				  sx=c.getString(c.getColumnIndex("suoshuxi")).trim();
-	        				 
-	        				  sb=c.getString(c.getColumnIndex("xingbie")).trim();
-	        				  
-	        				  yx=c.getString(c.getColumnIndex("youxiang")).trim();
-	        				  
-	        				  sj=c.getString(c.getColumnIndex("shouji")).trim();
-	        				  
-	                	 }
-	                	 user u=new user();
-	                	 u.setMima(pw);
-	                	 u.setXingming(xm);
-	                	 u.setZhanghao(n1);
-	                	 u.setNianlin(String.valueOf(nl));
-	                	 u.setQuanxian(qx);
-	                	 u.setShouji(sj);
-	                	 u.setSuoshuxi(sx);
-	                	 u.setSuoshuyuan(sy);
-	                	 u.setYouxiang(yx);
-	                	 u.setZhanghao(zh);
-	                	 if(zh == null || pw == null){
-	                		 Toast.makeText(MainActivity.this, "用户名不存在,或密码错误", 1).show();
-	                		 Intent intent=new Intent(MainActivity.this,MainActivity.class);
-	     					 MainActivity.this.startActivity(intent);
-	                	 }
-	                	 else{
-	                		 
-		                	 if(!pw.equals(p1)){
-		                	 Toast.makeText(MainActivity.this, "帐号密码错误", 1).show();		                	 
-		                	 }
-		                	 else if("教师".equals(qx)){
-		                		 Intent intent=new Intent(MainActivity.this,Tmain.class);
-		                		 MainActivity.this.startActivity(intent);
-		                		 }
-		                		 else if("系负责人".equals(qx)){
-		                		 
-		                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
-		                			 MainActivity.this.startActivity(intent);
-		                		 }
-		                		 else 
-		                			 if("教学办".equals(qx)){
-		                			 Intent intent=new Intent(MainActivity.this,Ymain.class);
-		                			 MainActivity.this.startActivity(intent);
-		                		 }
-		                	 }
-	                	 }
-	                	 c.close();
-	                 }
-	            }
-				
-				
-			
-		});
-        
-    }
+	            	 new AsyncTask<String, Void, Void>(){
 
+	 					@Override
+	 					protected Void doInBackground(String... params) {
+	 					String url="http://115.28.69.231/android/login.php";
+	 						HttpPost httprequest=new HttpPost(url);
+	 						List<NameValuePair>param=new ArrayList<NameValuePair>();
+	 						param.add(new BasicNameValuePair("zhanggao",n1));
+	 						param.add(new BasicNameValuePair("mima", p1));
+	 						try {
+	 							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
+	 							httprequest.setEntity(httpEntity);
+	 							HttpClient httpClient=new DefaultHttpClient();
+	 							HttpResponse httpResponse=httpClient.execute(httprequest);
+	 							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
+	 								String result=EntityUtils.toString(httpResponse.getEntity());
+	 								if(result.equals("error")){
+	 									 Toast.makeText(MainActivity.this, "用户名不存在,或密码错误", 1).show();
+	 			                		 Intent intent=new Intent(MainActivity.this,MainActivity.class);
+	 			     					 MainActivity.this.startActivity(intent);
+	 								}
+	 								else
+	 								{
+	 								JSONArray jsonArray=new JSONObject(result).getJSONArray("value");
+	 								for(int i=0;i<jsonArray.length();i++){
+	 									user u=new user();
+	 									JSONObject jsoObject=(JSONObject) jsonArray.opt(i);
+	 									zhanghao=jsoObject.getString("zhanggao");u.setZhanghao(zhanghao);
+	 									mima=jsoObject.getString("mima");u.setMima(mima);
+	 									name=jsoObject.getString("name");u.setName(name);
+	 									yuan=jsoObject.getString("yuan");u.setYuan(yuan);
+	 									xi=jsoObject.getString("xi");u.setXi(xi);
+	 									age=jsoObject.getString("age");u.setAge(age);
+	 									sex=jsoObject.getString("sex");u.setSex(sex);
+	 									email=jsoObject.getString("email");u.setEmail(email);
+	 									telephone=jsoObject.getString("telephone");u.setTelephone(telephone);
+	 									type=jsoObject.getString("type");u.setType(type);
+	 									
+	 								
+	 								}
+	 			                		 
+	 				                	
+	 				                		 if("t".equals(type)){
+	 				                		 Intent intent=new Intent(MainActivity.this,Tmain.class);
+	 				                		 MainActivity.this.startActivity(intent);
+	 				                		 }
+	 				                		 else if("x".equals(type)){
+	 				                		 
+	 				                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
+	 				                			 MainActivity.this.startActivity(intent);
+	 				                		 }
+	 				                		 else if("y".equals(type)){
+	 				                			 Intent intent=new Intent(MainActivity.this,Ymain.class);
+	 				                			 MainActivity.this.startActivity(intent);
+	 				                		 }
+	 				                	 
+	 								}
+	 							}
+	 							
+	 						else
+	 						{
+	 							Toast.makeText(MainActivity.this, "连接有问题", Toast.LENGTH_SHORT).show();
+	 						}
+	 						
+	 					} catch (UnsupportedEncodingException e) {
+	 							// TODO Auto-generated catch block
+	 							e.printStackTrace();
+	 						} catch (ClientProtocolException e) {
+	 						// TODO Auto-generated catch block
+	 							e.printStackTrace();
+	 						} catch (IOException e) {
+	 							// TODO Auto-generated catch block
+	 						e.printStackTrace();
+	 						} catch (JSONException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+	 						return null;
+	 						
+	 					}
+	 					
+	 				}.execute("http://115.28.69.231/index.php");
+	 			}
+			}
+        
+	 		
+	 		});
+		
+       
+    }
+    
     
 }
+
 

@@ -32,13 +32,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Yresetuser_1 extends Activity{
 	
-	private Button queren,quxiao;
+	private ImageButton queren,quxiao;
 	private ListView yresetuser_xinxi;
 	
 	String zhanghao;
@@ -56,8 +57,8 @@ public class Yresetuser_1 extends Activity{
 		setContentView(R.layout.yresetuser_1);
 		
 		yresetuser_xinxi =(ListView) findViewById(R.id.yresetuser_xinxi);
-		queren=(Button) findViewById(R.id.yresetuser_1_button1);
-		quxiao=(Button) findViewById(R.id.yresetuser_1_button2);
+		queren=(ImageButton) findViewById(R.id.y_yhgl_change_1);
+		quxiao=(ImageButton) findViewById(R.id.y_yhgl_back_1);
 		tv1=(TextView) findViewById(R.id.yresetuser_xingming_1);
 		tv2=(TextView) findViewById(R.id.yresetuser_mima_1);
 		tv3=(TextView) findViewById(R.id.yresetuser_quanxain_1);

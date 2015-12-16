@@ -13,13 +13,14 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Yadduser extends Activity {
 
-	private Button quanrentianjia;
-	private Button fanhui;
+	private ImageButton quanrentianjia;
+	private ImageButton fanhui;
 	String quanxian;
 	
 	private EditText yadduser_zhigonghao,yadduser_name,yadduser_password,yadduser_phone;
@@ -32,11 +33,11 @@ public class Yadduser extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.yadduser_view);
-		quanrentianjia=(Button) findViewById(R.id.ybutton15);
-		fanhui=(Button) findViewById(R.id.ybutton16);
+		quanrentianjia=(ImageButton) findViewById(R.id.y_yhgl_add);
+		fanhui=(ImageButton) findViewById(R.id.y_yhgl_add_back);
 		
-		yadduser_zhigonghao=(EditText) findViewById(R.id.yadduser_zhigonghao);
-		yadduser_name=(EditText) findViewById(R.id.yadduser_name);
+		yadduser_zhigonghao=(EditText) findViewById(R.id.y_yhgl_adduser_yhm);
+		yadduser_name=(EditText) findViewById(R.id.y_yhgl_adduser_name);
 		yadduser_password=(EditText) findViewById(R.id.yadduser_password);
 		yadduser_phone=(EditText) findViewById(R.id.yadduser_phone);
 		yadduser_power=(Spinner) findViewById(R.id.yadduser_power);

@@ -16,17 +16,13 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
-//import com.example.sql.douser;
-import com.example.sql.user;
+import com.example.xuanke.Yresetuser;
+import com.example.xuanke.Yresetuser_1;
+import com.example.xuanke.R;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -35,40 +31,43 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Yresetuser extends Activity {
 
-	private Button xiugai;
-	private Button fanhui;
-	   String pw=null;
-       String qx=null;
-       String zh=null;
-       String xm=null;
-       int nl=0;
-       String sj=null;
-       String yx=null;
-       String sy=null;
-       String sx=null;
-       String sb=null;
-       String n1=null;
-       String p1=null;
-	private EditText yonghuming,xingming;
 	
+	private ImageButton xiugai;
+	private ImageButton fanhui;
+	 String pw=null;
+     String qx=null;
+     String zh=null;
+     String xm=null;
+     int nl=0;
+     String sj=null;
+     String yx=null;
+     String sy=null;
+     String sx=null;
+     String sb=null;
+     String n1=null;
+     String p1=null;
+	private EditText yonghuming,xingming;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.yresetuser_view);
-		xiugai=(Button) findViewById(R.id.ybutton17);
-		fanhui=(Button) findViewById(R.id.ybutton18);
-		
+		setContentView(R.layout.yresetuser_view1);
+		System.out.println("bbb");
+		xiugai=(ImageButton) findViewById(R.id.y_yhgl_xiugai);
+		fanhui=(ImageButton) findViewById(R.id.y_yhgl_reset_back);
 		yonghuming=(EditText) findViewById(R.id.yresetuser_user_name);
-		xingming=(EditText) findViewById(R.id.yresetuser_input_password);
-		
-		xiugai.setOnClickListener(new OnClickListener() {
+		xingming=(EditText) findViewById(R.id.yresetuser_name);
+		System.out.println("ccc");
+        xiugai.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
 				// TODO Auto-generated method stub
 				 n1=yonghuming.getText().toString().trim();
 	           p1=xingming.getText().toString().trim();
@@ -141,21 +140,20 @@ public class Yresetuser extends Activity {
 //				intent.putExtra("data", b);
 //				Yresetuser.this.startActivity(intent);
 				//所选用户的信息按照adduser_1的形势展示。
-				
-			
 		});
-		fanhui.setOnClickListener(new OnClickListener() {
+        fanhui.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-//				Intent intent=new Intent(Yresetuser.this,Ymanageruser.class);
-//				Yresetuser.this.startActivity(intent);
+				
+//				Intent intent=new Intent(Ydeluser.this,Ymanageruser.class);
+//				Ydeluser.this.startActivity(intent);
 				Yresetuser.this.finish();
 			}
 		});
-		
 	}
 	
+
 	
 }

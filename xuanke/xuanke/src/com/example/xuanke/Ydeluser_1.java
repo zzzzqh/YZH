@@ -31,14 +31,15 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
 public class Ydeluser_1 extends Activity{
 	
 	
-	private Button del;
-	private Button back;
+	private ImageButton del;
+	private ImageButton back;
 	private ListView ydeluser_xinxi;
 	
 	String zhanghao;
@@ -52,8 +53,8 @@ public class Ydeluser_1 extends Activity{
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ydeluser_1);
-		del=(Button) findViewById(R.id.ydeluser_1_queren);
-		back=(Button) findViewById(R.id.ydeluser_1_back);
+		del=(ImageButton) findViewById(R.id.y_yhgl_del_1);
+		back=(ImageButton) findViewById(R.id.y_yhgl_del_back_1);
 		ydeluser_xinxi=(ListView) findViewById(R.id.ydeluser_xinxi);
 		
 		
