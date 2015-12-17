@@ -30,7 +30,8 @@ public class Tmain extends Activity implements OnClickListener{
 	private LinearLayout yTabkaikexinxi;
 	private LinearLayout yTabxuankeguanli;
 	private LinearLayout yTabgerenshezhi;
-
+	private ImageButton wodexuanke;
+	private ImageButton tijiaoshenqing;
 	private ImageButton ykaikexinxiImg;
 	private ImageButton yxuankeguanliImg;
 	private ImageButton ygerenshezhiImg;
@@ -70,7 +71,8 @@ public class Tmain extends Activity implements OnClickListener{
 		 
 		 go.setOnClickListener(this);
 		 xiugaixinxi.setOnClickListener(this);
-		 
+		 wodexuanke.setOnClickListener(this);
+		 tijiaoshenqing.setOnClickListener(this);
 		
 	}
 	@SuppressWarnings("deprecation")
@@ -101,7 +103,8 @@ public class Tmain extends Activity implements OnClickListener{
 		 * 
 		 */
 		
-		
+		wodexuanke=(ImageButton) tab02.findViewById(R.id.id_y_tab_wodexuanke_img);
+		tijiaoshenqing=(ImageButton) tab02.findViewById(R.id.id_y_tab_tijiaoshenqing_img);
 		go=(Button)tab01.findViewById(R.id.y_chaxun);
 		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_y_change_img);
 		xuenian=(Spinner) tab01.findViewById(R.id.y_xuenian);
@@ -200,6 +203,16 @@ public class Tmain extends Activity implements OnClickListener{
 			Tmain.this.startActivity(intent);
 	
 			break;
+		case R.id.id_y_tab_wodexuanke_img://点击开课计划书按钮跳转到修改个人信息界面
+			intent=new Intent(Tmain.this,Kechengliebiao.class);
+			Tmain.this.startActivity(intent);
+	
+			break;
+		case R.id.id_y_tab_tijiaoshenqing_img://点击开课计划书按钮跳转到修改个人信息界面
+			Toast.makeText(Tmain.this, "提交申请成功", 1).show();
+	
+			break;
+			
 		default:
 			break;
 		}

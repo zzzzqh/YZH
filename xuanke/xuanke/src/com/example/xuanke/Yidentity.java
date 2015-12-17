@@ -23,6 +23,7 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,8 +31,7 @@ import android.widget.Toast;
 
 public class Yidentity extends Activity {
 
-	private Button xiugai;
-	//private Button fanhui;
+	private ImageButton xiugai;
 	private TextView tv1;
 	private TextView tv2;
 	private EditText yidentity_password,yidentity_age,y_email,yphone_number;
@@ -46,20 +46,23 @@ public class Yidentity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.yidentity_view);
-		xiugai=(Button) findViewById(R.id.ybutton8);
+		xiugai=(ImageButton) findViewById(R.id.ybutton8);
 		//fanhui=(Button) findViewById(R.id.ybutton9);
+		 
 		tv1=(TextView) findViewById(R.id.yidentity_zhanghao);
 		tv2=(TextView) findViewById(R.id.yidentity_mima);
 		yidentity_password=(EditText) findViewById(R.id.yidentity_password);
 		yidentity_age=(EditText) findViewById(R.id.yidentity_age);
 		y_email=(EditText) findViewById(R.id.y_email);
+		
 		yphone_number=(EditText) findViewById(R.id.yphone_number);
 		yidentity_boy=(RadioButton) findViewById(R.id.yidentity_boy);
 		y_xueyuan=(Spinner) findViewById(R.id.y_xueyuan);
-//		
+		
 		user u=new user();
 		String xingming=u.getName();
 		String mima=u.getMima();
+		
 		tv1.setText("姓名:"+ xingming);
 		tv2.setText("原始密码:"+ mima);
 	    list.add("数计学院");
@@ -75,7 +78,7 @@ public class Yidentity extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
         //未spinner加載適配器
         y_xueyuan.setAdapter(adapter);
-	
+       
 		
 		xiugai.setOnClickListener(new OnClickListener() {
 			
@@ -83,10 +86,12 @@ public class Yidentity extends Activity {
 			public void onClick(View v) {
 				
 				Bundle c=new Bundle();
+				java.lang.System.out.println("aaa");
             	c.putString("yidentity_password",yidentity_password.getText().toString());
             	c.putString("yidentity_age",yidentity_age.getText().toString());
             	c.putString("y_email",y_email.getText().toString());
             	c.putString("yphone_number",yphone_number.getText().toString());
+            	java.lang.System.out.println("aaa");
             	c.putString("y_xueyuan", y_xueyuan.getSelectedItem().toString());
             	
             	if(yidentity_boy.isChecked()){

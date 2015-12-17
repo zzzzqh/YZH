@@ -69,103 +69,103 @@ public class MainActivity extends Activity {
         username=(EditText) findViewById(R.id.main_user_name);
         password=(EditText) findViewById(R.id.main_input_password);
         denglu.setOnClickListener(new OnClickListener() {
-			
+		
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				 n1=username.getText().toString().trim();
-	             p1=password.getText().toString().trim();
-	     
-	            if(n1.equals("")|| p1.equals("")){
-					Toast.makeText(MainActivity.this, "请填写完整信息", 1).show();
-					Intent intent=new Intent(MainActivity.this,MainActivity.class);
-					MainActivity.this.startActivity(intent);
-				}
-	            else
-	            {
-	            	 new AsyncTask<String, Void, Void>(){
-
-	 					@Override
-	 					protected Void doInBackground(String... params) {
-	 					String url="http://115.28.69.231/android/login.php";
-	 						HttpPost httprequest=new HttpPost(url);
-	 						List<NameValuePair>param=new ArrayList<NameValuePair>();
-	 						param.add(new BasicNameValuePair("zhanggao",n1));
-	 						param.add(new BasicNameValuePair("mima", p1));
-	 						try {
-	 							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
-	 							httprequest.setEntity(httpEntity);
-	 							HttpClient httpClient=new DefaultHttpClient();
-	 							HttpResponse httpResponse=httpClient.execute(httprequest);
-	 							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
-	 								String result=EntityUtils.toString(httpResponse.getEntity());
-	 								if(result.equals("error")){
-	 									 Toast.makeText(MainActivity.this, "用户名不存在,或密码错误", 1).show();
-	 			                		 Intent intent=new Intent(MainActivity.this,MainActivity.class);
-	 			     					 MainActivity.this.startActivity(intent);
-	 								}
-	 								else
-	 								{
-	 								JSONArray jsonArray=new JSONObject(result).getJSONArray("value");
-	 								for(int i=0;i<jsonArray.length();i++){
-	 									user u=new user();
-	 									JSONObject jsoObject=(JSONObject) jsonArray.opt(i);
-	 									zhanghao=jsoObject.getString("zhanggao");u.setZhanghao(zhanghao);
-	 									mima=jsoObject.getString("mima");u.setMima(mima);
-	 									name=jsoObject.getString("name");u.setName(name);
-	 									yuan=jsoObject.getString("yuan");u.setYuan(yuan);
-	 									xi=jsoObject.getString("xi");u.setXi(xi);
-	 									age=jsoObject.getString("age");u.setAge(age);
-	 									sex=jsoObject.getString("sex");u.setSex(sex);
-	 									email=jsoObject.getString("email");u.setEmail(email);
-	 									telephone=jsoObject.getString("telephone");u.setTelephone(telephone);
-	 									type=jsoObject.getString("type");u.setType(type);
-	 									
-	 								
-	 								}
-	 			                		 
-	 				                	
-	 				                		 if("t".equals(type)){
+//				// TODO Auto-generated method stub
+//				 n1=username.getText().toString().trim();
+//	             p1=password.getText().toString().trim();
+//	     
+//	            if(n1.equals("")|| p1.equals("")){
+//					Toast.makeText(MainActivity.this, "请填写完整信息", 1).show();
+//					Intent intent=new Intent(MainActivity.this,MainActivity.class);
+//					MainActivity.this.startActivity(intent);
+//				}
+//	            else
+//	            {
+//	            	 new AsyncTask<String, Void, Void>(){
+//
+//	 					@Override
+//	 					protected Void doInBackground(String... params) {
+//	 					String url="http://115.28.69.231/android/login.php";
+//	 						HttpPost httprequest=new HttpPost(url);
+//	 						List<NameValuePair>param=new ArrayList<NameValuePair>();
+//	 						param.add(new BasicNameValuePair("zhanggao",n1));
+//	 						param.add(new BasicNameValuePair("mima", p1));
+//	 						try {
+//	 							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
+//	 							httprequest.setEntity(httpEntity);
+//	 							HttpClient httpClient=new DefaultHttpClient();
+//	 							HttpResponse httpResponse=httpClient.execute(httprequest);
+//	 							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
+//	 								String result=EntityUtils.toString(httpResponse.getEntity());
+//	 								if(result.toString().trim().equals("error")){
+//	 									 Toast.makeText(MainActivity.this, "用户名不存在,或密码错误", 1).show();
+////	 			                		 Intent intent=new Intent(MainActivity.this,MainActivity.class);
+////	 			     					 MainActivity.this.startActivity(intent);
+//	 								}
+//	 								else
+//	 								{
+//	 								JSONArray jsonArray=new JSONObject(result).getJSONArray("value");
+//	 								for(int i=0;i<jsonArray.length();i++){
+//	 									user u=new user();
+//	 									JSONObject jsoObject=(JSONObject) jsonArray.opt(i);
+//	 									zhanghao=jsoObject.getString("zhanggao");u.setZhanghao(zhanghao);
+//	 									mima=jsoObject.getString("mima");u.setMima(mima);
+//	 									name=jsoObject.getString("name");u.setName(name);
+//	 									yuan=jsoObject.getString("yuan");u.setYuan(yuan);
+//	 									xi=jsoObject.getString("xi");u.setXi(xi);
+//	 									age=jsoObject.getString("age");u.setAge(age);
+//	 									sex=jsoObject.getString("sex");u.setSex(sex);
+//	 									email=jsoObject.getString("email");u.setEmail(email);
+//	 									telephone=jsoObject.getString("telephone");u.setTelephone(telephone);
+//	 									type=jsoObject.getString("type");u.setType(type);
+//	 									
+//	 								
+//	 								}
+//	 			                		 
+//	 				                	
+//	 				                		 if("t".equals(type)){
 	 				                		 Intent intent=new Intent(MainActivity.this,Tmain.class);
 	 				                		 MainActivity.this.startActivity(intent);
-	 				                		 }
-	 				                		 else if("x".equals(type)){
-	 				                		 
-	 				                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
-	 				                			 MainActivity.this.startActivity(intent);
-	 				                		 }
-	 				                		 else if("y".equals(type)){
-	 				                			 Intent intent=new Intent(MainActivity.this,Ymain.class);
-	 				                			 MainActivity.this.startActivity(intent);
-	 				                		 }
-	 				                	 
-	 								}
-	 							}
-	 							
-	 						else
-	 						{
-	 							Toast.makeText(MainActivity.this, "连接有问题", Toast.LENGTH_SHORT).show();
-	 						}
-	 						
-	 					} catch (UnsupportedEncodingException e) {
-	 							// TODO Auto-generated catch block
-	 							e.printStackTrace();
-	 						} catch (ClientProtocolException e) {
-	 						// TODO Auto-generated catch block
-	 							e.printStackTrace();
-	 						} catch (IOException e) {
-	 							// TODO Auto-generated catch block
-	 						e.printStackTrace();
-	 						} catch (JSONException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-	 						return null;
-	 						
-	 					}
-	 					
-	 				}.execute("http://115.28.69.231/index.php");
-	 			}
+//	 				                		 }
+//	 				                		 else if("x".equals(type)){
+//	 				                		 
+//	 				                			 Intent intent=new Intent(MainActivity.this,Mmain.class);
+//	 				                			 MainActivity.this.startActivity(intent);
+//	 				                		 }
+//	 				                		 else if("y".equals(type)){
+//	 				                			 Intent intent=new Intent(MainActivity.this,Ymain.class);
+//	 				                			 MainActivity.this.startActivity(intent);
+//	 				                		 }
+//	 				                	 
+//	 								}
+//	 							}
+//	 							
+//	 						else
+//	 						{
+//	 							Toast.makeText(MainActivity.this, "连接有问题", Toast.LENGTH_SHORT).show();
+//	 						}
+//	 						
+//	 					} catch (UnsupportedEncodingException e) {
+//	 							// TODO Auto-generated catch block
+//	 							e.printStackTrace();
+//	 						} catch (ClientProtocolException e) {
+//	 						// TODO Auto-generated catch block
+//	 							e.printStackTrace();
+//	 						} catch (IOException e) {
+//	 							// TODO Auto-generated catch block
+//	 						e.printStackTrace();
+//	 						} catch (JSONException e) {
+//								// TODO Auto-generated catch block
+//								e.printStackTrace();
+//							}
+//	 						return null;
+//	 						
+//	 					}
+//	 					
+//	 				}.execute("http://115.28.69.231/index.php");
+//	 			}
 			}
         
 	 		

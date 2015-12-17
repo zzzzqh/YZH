@@ -1,7 +1,26 @@
 package com.example.xuanke;
 
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.sql.user;
 
 //import com.example.text.Ymain;
 //import com.example.text.Yupdateplan;
@@ -12,6 +31,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -24,12 +44,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class Ymain extends Activity implements OnClickListener{
 
@@ -60,11 +83,15 @@ public class Ymain extends Activity implements OnClickListener{
 	private ArrayAdapter<String> adapter1;
 	private Spinner zhuanye;
 	private List<String> list2=new ArrayList<String>();
+	final List<String> list5=new ArrayList<String>();
 	private ArrayAdapter<String> adapter2;
 	private Button go;
 	private String xq;
 	private String xn;
 	private String zy;
+	private String kechengming;
+	private String zyrecall;
+	private ListView ykkjhs;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -89,6 +116,7 @@ public class Ymain extends Activity implements OnClickListener{
 		 tianjiyonghu.setOnClickListener(this);
 		 daochukebiao.setOnClickListener(this);
 		 go.setOnClickListener(this);
+		
 		
 	}
 	@SuppressWarnings("deprecation")
@@ -118,6 +146,8 @@ public class Ymain extends Activity implements OnClickListener{
 		 * 然后再给imagebutton注册监听事件就可以了。
 		 * 
 		 */
+		ykkjhs=(ListView) tab01.findViewById(R.id.y_kkjhs);
+		
 		go=(Button)tab01.findViewById(R.id.y_chaxun);
 		gengxinjiahuashu = (ImageButton) tab01.findViewById(R.id.id_y_tab_gengxin_img);
 		xuenian=(Spinner) tab01.findViewById(R.id.y_xuenian);
@@ -137,9 +167,9 @@ public class Ymain extends Activity implements OnClickListener{
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); 
 	    xueqi.setAdapter(adapter1);
 	    zhuanye=(Spinner) tab01.findViewById(R.id.y_zhuanye);
-		list2.add("计算机（实验班）");
-		list2.add("计算机（卓越班）");
-		list2.add("计算机");
+		list2.add("计算机实验班");
+		list2.add("计算机科学与技术（卓越班）");
+		list2.add("计算机科学与技术");
 		list2.add("软件工程");
 		list2.add("数学类（实验班）");
 		list2.add("网络工程");
@@ -247,6 +277,7 @@ public class Ymain extends Activity implements OnClickListener{
 			break;
 		case R.id.id_y_change_img://点击开课计划书按钮跳转到修改个人信息界面
 			 intent=new Intent(Ymain.this,Yidentity.class);
+			 System.out.println("aaa");
 			Ymain.this.startActivity(intent);
 	
 			break;
@@ -254,7 +285,130 @@ public class Ymain extends Activity implements OnClickListener{
 			xq=xueqi.getSelectedItem().toString();
 			xn=xuenian.getSelectedItem().toString();
 			zy=zhuanye.getSelectedItem().toString();
-			Toast.makeText(Ymain.this, xq+" "+xn+""+zy, 1).show();
+//			Bundle b=new Bundle();
+//		    b.putString("xq", xq);
+//		    b.putString("xn", xn);
+//		    b.putString("zy", zy);
+//		    intent=new Intent(Ymain.this,Kechengliebiao.class);
+//		    intent.putExtra("data", b);
+//		    Ymain.this.startActivity(intent);
+//			Toast.makeText(Ymain.this, xq+" "+xn+""+zy, 1).show();
+
+			 new AsyncTask<String, Void, Void>(){
+
+					@Override
+					protected Void doInBackground(String... params) {
+					String url="http://115.28.69.231/android/takeclassname.php";
+						HttpPost httprequest=new HttpPost(url);
+						List<NameValuePair>param=new ArrayList<NameValuePair>();
+						//param.add(new BasicNameValuePair("xueqi",xq));
+						//param.add(new BasicNameValuePair("xuenian", xn));
+						param.add(new BasicNameValuePair("zhuangye", zy));
+						try {
+							HttpEntity httpEntity=new UrlEncodedFormEntity(param,"utf-8");
+							httprequest.setEntity(httpEntity);
+							HttpClient httpClient=new DefaultHttpClient();
+							HttpResponse httpResponse=httpClient.execute(httprequest);
+							if(httpResponse.getStatusLine().getStatusCode()==HttpStatus.SC_OK){
+								String result=EntityUtils.toString(httpResponse.getEntity());
+								if(result.equals("error")){
+									 Toast.makeText(Ymain.this, "用户名不存在,或密码错误", 1).show();
+//			                		 Intent intent=new Intent(MainActivity.this,MainActivity.class);
+//			     					 MainActivity.this.startActivity(intent);
+								}
+								else
+								{
+								JSONArray jsonArray=new JSONObject(result).getJSONArray("value");
+								for(int i=0;i<jsonArray.length();i++){
+									user u=new user();
+									JSONObject jsoObject=(JSONObject) jsonArray.opt(i);
+									zyrecall=jsoObject.getString("kechen");									
+									list5.add(zyrecall);//把服务器返回的数据添加到listview									
+								}
+	 
+								}
+							}
+							
+						else
+						{
+							Toast.makeText(Ymain.this, "连接有问题", Toast.LENGTH_SHORT).show();
+						}
+						
+					} catch (UnsupportedEncodingException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (ClientProtocolException e) {
+						// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+						e.printStackTrace();
+						} catch (JSONException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						return null;
+						
+					}
+					
+				}.execute("http://115.28.69.231/index.php");
+				ArrayAdapter<String> adapter5 = new  ArrayAdapter<String>(this,  android.R.layout.simple_list_item_checked,list5);
+				ykkjhs.setAdapter(adapter5);
+				ykkjhs.setOnItemClickListener(new OnItemClickListener(){
+
+					 
+
+		            @Override
+
+		            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+
+		                    long arg3) {
+
+		                // TODO Auto-generated method stub
+		            	kechengming=list5.get(arg2).toString();
+		            	Toast.makeText(Ymain.this, kechengming, Toast.LENGTH_SHORT).show();
+		            	Bundle b=new Bundle();
+		            	
+						b.putString("zhuanye", zy);
+						b.putString("kechengmingcheng", kechengming);
+	                	Intent intent=new Intent(Ymain.this,Kechengxinxi.class);
+	                	intent.putExtra("data", b);
+	                	Ymain.this.startActivity(intent);
+//		            	if(list.get(arg2).equals("并行程序设计"))
+//
+//		                {
+//		                	System.out.println("aa");
+//		                	
+//		                	Bundle b=new Bundle();
+//		                	b.putString("zhuanye", zy);
+//							b.putString("kechengming", kechengming);
+//		                	Intent intent=new Intent(Ymain.this,Kechengxinxi.class);
+//		                	intent.putExtra("data", b);
+//		                	Ymain.this.startActivity(intent);
+//
+//		                }
+//
+//		            	if(list.get(arg2).equals("计算机图形学"))
+//
+//		                {
+//		                	System.out.println("aa");
+//		                	
+//		                	Bundle b=new Bundle();
+//		                	b.putString("zhuanye", zy);
+//							b.putString("kechengming", kechengming);
+//		                	Intent intent=new Intent(Ymain.this,Kechengxinxi.class);
+//		                	intent.putExtra("data", b);
+//		                	Ymain.this.startActivity(intent);
+//
+//		                }
+//
+//
+		            }
+
+		             
+
+		        });
+				
 			break;
 		default:
 			break;

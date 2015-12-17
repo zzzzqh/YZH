@@ -116,5 +116,7 @@
     <string name="title_activity_mmanagerclass_1">Mmanagerclass_1</string>
     <string name="title_activity_mmanagerclass_2">Mmanagerclass_2</string>
     <string name="title_activity_teacherxinxi">Teacherxinxi</string>
+    <string name="title_activity_kechengxinxi">Kechengxinxi</string>
+    <string name="title_activity_kechengliebiao">Kechengliebiao</string>
 
 </resources>

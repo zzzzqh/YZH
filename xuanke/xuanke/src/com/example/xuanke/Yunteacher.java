@@ -57,7 +57,6 @@ public class Yunteacher extends Activity {
                 	Toast.makeText(Yunteacher.this, "张三", 1).show();
                 	Bundle b=new Bundle();
 					b.putString("yonghuming", "张三");
-					System.out.println("bb");
                 	Intent intent=new Intent(Yunteacher.this,Teacherxinxi.class);
                 	intent.putExtra("data", b);
                 	Yunteacher.this.startActivity(intent);

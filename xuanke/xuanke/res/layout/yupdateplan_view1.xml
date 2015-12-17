@@ -79,7 +79,56 @@
              android:layout_marginTop="57dp"
              android:background="@drawable/login_layout_editor_bg"
              android:orientation="vertical" >
-             
+             <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                 <ImageButton
+                     android:id="@+id/y_xuenian"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@android:color/white"
+                     android:src="@drawable/set" />
+
+
+                <EditText
+                    android:id="@+id/xuenian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="学年"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                 <ImageButton
+                     android:id="@+id/y_xueqi"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:background="@android:color/white"
+                     android:src="@drawable/set" />
+
+
+                <EditText
+                    android:id="@+id/xueqi"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="学期"
+                    android:layout_marginRight="5dp"
+                    android:background="#fffbfbfb"
+                    android:singleLine="true" />
+            </LinearLayout>
              <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="47dp"

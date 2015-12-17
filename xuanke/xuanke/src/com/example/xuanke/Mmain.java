@@ -30,7 +30,7 @@ public class Mmain extends Activity implements OnClickListener{
 	private LinearLayout yTabkaikexinxi;
 	private LinearLayout yTabxuankeguanli;
 	private LinearLayout yTabgerenshezhi;
-
+	private ImageButton tijiaoshenhe;
 	private ImageButton ykaikexinxiImg;
 	private ImageButton yxuankeguanliImg;
 	private ImageButton ygerenshezhiImg;
@@ -70,7 +70,7 @@ public class Mmain extends Activity implements OnClickListener{
 		 go.setOnClickListener(this);
 		 weixuakejiaoshi.setOnClickListener(this);
 		 xiugaixinxi.setOnClickListener(this);
-		 
+		 tijiaoshenhe.setOnClickListener(this);
 		
 	}
 	@SuppressWarnings("deprecation")
@@ -102,7 +102,7 @@ public class Mmain extends Activity implements OnClickListener{
 		 */
 		
 		weixuakejiaoshi=(ImageButton) tab02.findViewById(R.id.id_y_tab_weixuankejiaoshi_img);
-		
+		tijiaoshenhe=(ImageButton) tab02.findViewById(R.id.id_y_tab_tijiaoshenhe_img);
 		xiugaixinxi=(ImageButton) tab03.findViewById(R.id.id_y_change_img);
 		go=(Button)tab01.findViewById(R.id.y_chaxun);
 		xuenian=(Spinner) tab01.findViewById(R.id.y_xuenian);
@@ -205,6 +205,10 @@ public class Mmain extends Activity implements OnClickListener{
 		case R.id.id_y_change_img://点击开课计划书按钮跳转到修改个人信息界面
 			 intent=new Intent(Mmain.this,Midentity.class);
 			Mmain.this.startActivity(intent);
+	
+			break;
+		case R.id.id_y_tab_tijiaoshenhe_img://点击开课计划书按钮跳转到修改个人信息界面
+			 Toast.makeText(Mmain.this, "审核提交成功", 1).show();
 	
 			break;
 		default:

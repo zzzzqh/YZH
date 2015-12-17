@@ -136,8 +136,48 @@
                android:layout_alignParentLeft="true"
                android:background="@drawable/login_layout_editor_bg"
                android:orientation="horizontal" >
+           <LinearLayout
+                   android:id="@+id/id_tab_wodexuanke"
+                   android:layout_width="150dp"
+                   android:layout_height="68dp"
+                   android:gravity="center"
+                   android:orientation="vertical" >
 
+                   <ImageButton
+                       android:id="@+id/id_y_tab_wodexuanke_img"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="#ff000000"
+                       android:src="@drawable/weixuankejiaoshi" />
 
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="我的选课"
+                       android:textColor="#ff000000"
+                       android:textSize="12sp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:id="@+id/id_tab_tijiaoshenqing"
+                   android:layout_width="150dp"
+                   android:layout_height="68dp"
+                   android:gravity="center"
+                   android:orientation="vertical" >
+
+                   <ImageButton
+                       android:id="@+id/id_y_tab_tijiaoshenqing_img"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="#ff000000"
+                       android:src="@drawable/weixuankejiaoshi" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="提交申请"
+                       android:textColor="#ff000000"
+                       android:textSize="12sp" />
+               </LinearLayout>
            </LinearLayout>
-     
+
 </RelativeLayout>
