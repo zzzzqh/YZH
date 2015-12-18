@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Yunteacher" >
+    
+    
+    
+     <LinearLayout
+        android:id="@+id/yunteacher_title"
+       android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+         <ImageButton
+             android:id="@+id/y_unchooset_back"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@android:color/white"
+             android:src="@drawable/back" />
+         
+        <TextView
+            android:layout_width="238dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="@string/y_unchooset_list"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/y_unteacher_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:src="@drawable/remind" />
+
+    </LinearLayout>
+    
+       <LinearLayout
+           android:id="@+id/yunteacher_edit_layout"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/yunteacher_title"
+           android:background="@drawable/login_layout_editor_bg"
+           android:orientation="horizontal" >
+        
+           <Spinner
+            android:id="@+id/yunteacher_xinxi"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+        
+       </LinearLayout>
+
+</RelativeLayout>

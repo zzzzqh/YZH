@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Youtput" >
+
+    
+     <LinearLayout
+        android:id="@+id/youtput_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/purple"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="选课导出"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/youtput_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/youtput_title"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="horizontal" >
+
+          <LinearLayout
+              android:layout_width="51dp"
+              android:layout_height="match_parent"
+              android:layout_alignParentLeft="true"
+              android:background="@drawable/login_layout_editor_bg"
+              android:orientation="vertical" >
+
+         <EditText
+             android:id="@+id/youtput_editText1"
+             android:layout_width="64dp"
+             android:layout_height="wrap_content"
+             android:ems="10"
+             android:text="专业"
+              android:textColor="@android:color/black" />
+
+         <CheckBox
+             android:id="@+id/checkBox_all"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" 
+             android:text="全选"
+              android:textColor="@android:color/black"></CheckBox>
+             "
+         
+         </LinearLayout>
+         
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_alignParentLeft="true"
+             android:background="@drawable/login_layout_editor_bg"
+             android:orientation="vertical" >
+      
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="47dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal" >
+
+              <EditText
+                  android:id="@+id/youtput_computer_shiyan"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1.04"
+                  android:ems="10"
+                  android:text="计算机专业（实验班）"
+                  android:textColor="@android:color/black" />
+
+              <CheckBox
+                  android:id="@+id/checkBox1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+          </LinearLayout>
+
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+         
+
+         <EditText
+             android:id="@+id/youtput_math_shiyan"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:layout_weight="1.04"
+             android:ems="10"
+             android:text="数学专业（实验班）"
+              android:textColor="@android:color/black"/>
+
+         <CheckBox
+             android:id="@+id/checkBox2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             />
+
+           </LinearLayout>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+         <EditText
+             android:id="@+id/youtput_computer_zhuoyue"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:layout_weight="1.04"
+             android:ems="10"
+             android:text="计算机专业（卓越班）"
+              android:textColor="@android:color/black" />
+
+         <CheckBox
+             android:id="@+id/checkBox3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             />
+
+           </LinearLayout>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+         <EditText
+             android:id="@+id/youtput_computer"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:layout_weight="1.04"
+             android:ems="10"
+             android:text="计算机专业"
+             android:textColor="@android:color/black" />
+
+         <CheckBox
+             android:id="@+id/checkBox4"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+        />
+
+               </LinearLayout>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+    
+
+         <EditText
+             android:id="@+id/youtput_math"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:layout_weight="1.04"
+             android:ems="10"
+             android:text="数学专业"
+              android:textColor="@android:color/black" />
+
+         <CheckBox
+             android:id="@+id/checkBox5"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+
+           </LinearLayout>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+         
+         
+             <EditText
+                 android:id="@+id/youtput_ruangong"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                  android:layout_weight="1.04"
+                 android:ems="10"
+                 android:text="软件工程专业"
+                  android:textColor="@android:color/black"/>
+
+             <CheckBox
+                 android:id="@+id/checkBox6"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+               </LinearLayout>
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+             <EditText
+                 android:id="@+id/youtput_computer_security"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1.04"
+                 android:text="信息安全专业"
+                  android:textColor="@android:color/black" />
+
+             <CheckBox
+                 android:id="@+id/checkBox7"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+               </LinearLayout>
+               </LinearLayout>
+
+</LinearLayout>
+
+     <Button
+         android:id="@+id/ybutton27"
+         android:layout_width="150dp"
+         android:layout_height="42dp"
+         android:layout_alignBaseline="@+id/ybutton26"
+         android:layout_alignBottom="@+id/ybutton26"
+         android:layout_alignParentRight="true"
+         android:layout_toRightOf="@+id/ybutton26"
+         android:background="@color/purple"
+         android:text="返回"
+         android:textColor="@android:color/white"
+         android:textSize="15sp" />
+
+     <Button
+         android:id="@+id/ybutton26"
+         android:layout_width="160dp"
+         android:layout_height="42dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:background="@color/purple"
+         android:text="确认导出"
+         android:textColor="@android:color/white"
+         android:textSize="15sp" />
+
+</RelativeLayout>

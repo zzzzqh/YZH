@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Ymanagerclass" >
+ <LinearLayout
+          android:id="@+id/ymanageclass_title"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:singleLine="true"
+              android:text="@string/y_xuankeguanli"
+              android:textColor="@android:color/black"
+              android:textSize="15sp" />
+      </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/ymanageclass_edit_layout"
+           android:layout_width="match_parent"
+           android:layout_height="330dp"
+           android:layout_above="@+id/ymanageclass_button"
+           android:layout_alignParentLeft="true"
+           android:layout_below="@+id/ymanageclass_title"
+           android:background="@drawable/login_layout_editor_bg"
+           android:orientation="vertical" >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="13dp"
+               android:layout_marginRight="13dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/login_layout_editor_bg"
+               android:orientation="vertical" >
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="47dp"
+                   android:focusable="true"
+                   android:focusableInTouchMode="true"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal" >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:text="@string/y_zhuanye"
+                       android:textColor="@android:color/black"
+                       android:textSize="17sp" />
+
+                   <EditText
+                       android:id="@+id/ymanageclass_zhuanye"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginRight="5dp"
+                       android:background="#fffbfbfb"
+                       android:singleLine="true" >
+
+                       <requestFocus />
+                   </EditText>
+               </LinearLayout>
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="#ffc8c8c8" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="47dp"
+                   android:gravity="center_vertical"
+                   android:orientation="horizontal" >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:text="@string/y_kechengming"
+                       android:textColor="@android:color/black"
+                       android:textSize="17sp" />
+
+                   <EditText
+                       android:id="@+id/ymanageclass_kechengming"
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:background="#fffbfbfb"
+                       android:singleLine="true" />
+               </LinearLayout>
+           </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/id_y_tab_chaxun"
+               android:layout_width="298dp"
+               android:layout_height="60dp"
+               android:gravity="right"
+               android:orientation="vertical" >
+
+               <ImageButton
+                   android:id="@+id/id_tab_chaxun_img"
+                   android:layout_width="45sp"
+                   android:layout_height="45sp"
+                   android:background="#00000000"
+                   android:src="@drawable/chaxun" />
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/y_chaxun"
+                   android:textColor="#ff000000"
+                   android:textSize="12sp" />
+           </LinearLayout>
+  </LinearLayout>
+
+           <LinearLayout
+               android:id="@+id/ymanageclass_button"
+               android:layout_width="match_parent"
+               android:layout_height="68dp"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentLeft="true"
+               android:background="@drawable/login_layout_editor_bg"
+               android:orientation="horizontal" >
+
+               <LinearLayout
+                   android:id="@+id/id_tab_weixuankejiaoshi"
+                   android:layout_width="150dp"
+                   android:layout_height="68dp"
+                   android:gravity="center"
+                   android:orientation="vertical" >
+
+                   <ImageButton
+                       android:id="@+id/id_y_tab_weixuankejiaoshi_img"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="#ff000000"
+                       android:src="@drawable/weixuankejiaoshi" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/y_unchooseteacher"
+                       android:textColor="#ff000000"
+                       android:textSize="12sp" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/id_y_tab_daochukebiao"
+                   android:layout_width="match_parent"
+                   android:layout_height="68dp"
+                   android:gravity="center"
+                   android:orientation="vertical" >
+
+                   <ImageButton
+                       android:id="@+id/id_tab_daochukebiao_img"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="#00000000"
+                       android:src="@drawable/daochukebiao" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="@string/y_daochukebiao"
+                       android:textColor="#ff000000"
+                       android:textSize="12sp" />
+               </LinearLayout>
+           </LinearLayout>
+     
+</RelativeLayout>

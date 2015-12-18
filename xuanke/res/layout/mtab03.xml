@@ -1,0 +1,261 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.example.text.Yidentity" >
+    
+      <LinearLayout
+        android:id="@+id/ytab03_title"
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:background="@android:color/white"
+          android:gravity="center_vertical"
+          android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="@string/personal_message"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+    
+
+       <LinearLayout
+            android:id="@+id/yshow_edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ytab03_title"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_layout_editor_bg"
+            android:orientation="vertical" >
+             
+              <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/name"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/old_password"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_mima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+           
+            
+              <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+             
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/resource_y"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_xueyuan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+               
+            </LinearLayout>
+             
+            
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+             
+            
+              
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/age"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_age"
+                     android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"  >
+                </ListView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:text="@string/sex"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                    <ListView
+                        android:id="@+id/yshow_sex"
+                         android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                        
+                    </ListView>
+
+            </LinearLayout>
+              
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+            
+   
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/email"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+            
+                <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffc8c8c8" />
+                
+             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/phone"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <ListView
+                    android:id="@+id/yshow_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+                </ListView>
+
+            </LinearLayout>
+  </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/id_tab_xiugai"
+         android:layout_width="fill_parent"
+         android:layout_height="70dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentLeft="true"
+         android:gravity="center"
+         android:orientation="vertical" >
+
+         <ImageButton
+             android:id="@+id/id_y_change_img"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="#ff000000"
+             android:src="@drawable/xiugai" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@string/change"
+             android:textColor="#ff000000"
+             android:textSize="12sp" />
+     </LinearLayout>
+
+</RelativeLayout>
